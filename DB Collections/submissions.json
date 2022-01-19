@@ -1,0 +1,369 @@
+[{
+  "_id": {
+    "$oid": "61e54f757c690ce5369bbb5f"
+  },
+  "evaluation_id": {
+    "$oid": "61e544cbd1d18cec98626916"
+  },
+  "answered_by": {
+    "$oid": "61e54c884d03f1f8a4c2c1b1"
+  },
+  "status": "submitted",
+  "submission_time": "10-01-2022",
+  "score": 10,
+  "assessed_by": {
+    "$oid": "61e53fe1c06c5cbfbaed4080"
+  },
+  "submission_link": "D:\\Unit-4-C4\\src\\uploads\\submissions\\1642418037691-Pink-Sky-Zoom-Background.jpg",
+  "createdAt": {
+    "$date": "2022-01-17T11:13:57.734Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:13:57.734Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e55088e6eb3e9a4654e60c"
+  },
+  "evaluation_id": {
+    "$oid": "61e544cbd1d18cec98626916"
+  },
+  "answered_by": {
+    "$oid": "61e54ca44d03f1f8a4c2c1b3"
+  },
+  "status": "submitted",
+  "submission_time": "10-01-2022",
+  "score": 9,
+  "assessed_by": {
+    "$oid": "61e53fe1c06c5cbfbaed4080"
+  },
+  "submission_link": "D:\\Unit-4-C4\\src\\uploads\\submissions\\1642418312214-Grey & White Minimal Resume.png",
+  "createdAt": {
+    "$date": "2022-01-17T11:18:32.304Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:18:32.304Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e55115e6eb3e9a4654e611"
+  },
+  "evaluation_id": {
+    "$oid": "61e544cbd1d18cec98626916"
+  },
+  "answered_by": {
+    "$oid": "61e54d8f4d03f1f8a4c2c1c8"
+  },
+  "status": "partially_submitted",
+  "submission_time": "10-01-2022",
+  "score": 8,
+  "assessed_by": {
+    "$oid": "61e53fe1c06c5cbfbaed4080"
+  },
+  "submission_link": "D:\\Unit-4-C4\\src\\uploads\\submissions\\1642418453623-Grey & White Minimal Resume.png",
+  "createdAt": {
+    "$date": "2022-01-17T11:20:53.656Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:20:53.656Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e55137e6eb3e9a4654e613"
+  },
+  "evaluation_id": {
+    "$oid": "61e544cbd1d18cec98626916"
+  },
+  "answered_by": {
+    "$oid": "61e54da44d03f1f8a4c2c1ca"
+  },
+  "status": "pending",
+  "submission_time": "10-01-2022",
+  "score": 8,
+  "assessed_by": {
+    "$oid": "61e53fe1c06c5cbfbaed4080"
+  },
+  "submission_link": "D:\\Unit-4-C4\\src\\uploads\\submissions\\1642418487117-Grey & White Minimal Resume.png",
+  "createdAt": {
+    "$date": "2022-01-17T11:21:27.140Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:21:27.140Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e5515fe6eb3e9a4654e618"
+  },
+  "evaluation_id": {
+    "$oid": "61e544cbd1d18cec98626916"
+  },
+  "answered_by": {
+    "$oid": "61e54db04d03f1f8a4c2c1cc"
+  },
+  "status": "submitted",
+  "submission_time": "10-01-2022",
+  "score": 6,
+  "assessed_by": {
+    "$oid": "61e53fe1c06c5cbfbaed4080"
+  },
+  "submission_link": "D:\\Unit-4-C4\\src\\uploads\\submissions\\1642418527169-Grey & White Minimal Resume.png",
+  "createdAt": {
+    "$date": "2022-01-17T11:22:07.188Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:22:07.188Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e55176e6eb3e9a4654e61a"
+  },
+  "evaluation_id": {
+    "$oid": "61e544cbd1d18cec98626916"
+  },
+  "answered_by": {
+    "$oid": "61e54dbf4d03f1f8a4c2c1ce"
+  },
+  "status": "submitted",
+  "submission_time": "10-01-2022",
+  "score": 6,
+  "assessed_by": {
+    "$oid": "61e53fe1c06c5cbfbaed4080"
+  },
+  "submission_link": "D:\\Unit-4-C4\\src\\uploads\\submissions\\1642418550491-Grey & White Minimal Resume.png",
+  "createdAt": {
+    "$date": "2022-01-17T11:22:30.522Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:22:30.522Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e55194e6eb3e9a4654e61c"
+  },
+  "evaluation_id": {
+    "$oid": "61e544cbd1d18cec98626916"
+  },
+  "answered_by": {
+    "$oid": "61e54dd04d03f1f8a4c2c1d0"
+  },
+  "status": "pending",
+  "submission_time": "10-01-2022",
+  "score": 4,
+  "assessed_by": {
+    "$oid": "61e53fe1c06c5cbfbaed4080"
+  },
+  "submission_link": "D:\\Unit-4-C4\\src\\uploads\\submissions\\1642418580961-Grey & White Minimal Resume.png",
+  "createdAt": {
+    "$date": "2022-01-17T11:23:00.977Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:23:00.977Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e551d1e6eb3e9a4654e61e"
+  },
+  "evaluation_id": {
+    "$oid": "61e544cbd1d18cec98626916"
+  },
+  "answered_by": {
+    "$oid": "61e54ddf4d03f1f8a4c2c1d2"
+  },
+  "status": "submitted",
+  "submission_time": "12-01-2022",
+  "score": 4,
+  "assessed_by": {
+    "$oid": "61e53fe1c06c5cbfbaed4080"
+  },
+  "submission_link": "D:\\Unit-4-C4\\src\\uploads\\submissions\\1642418641720-Grey & White Minimal Resume.png",
+  "createdAt": {
+    "$date": "2022-01-17T11:24:01.736Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:24:01.736Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e55241e6eb3e9a4654e623"
+  },
+  "evaluation_id": {
+    "$oid": "61e544ecd1d18cec98626918"
+  },
+  "answered_by": {
+    "$oid": "61e54ddf4d03f1f8a4c2c1d2"
+  },
+  "status": "submitted",
+  "submission_time": "18-01-2022",
+  "score": 4,
+  "assessed_by": {
+    "$oid": "61e53ff2c06c5cbfbaed4083"
+  },
+  "submission_link": "D:\\Unit-4-C4\\src\\uploads\\submissions\\1642418753097-Grey & White Minimal Resume.png",
+  "createdAt": {
+    "$date": "2022-01-17T11:25:53.115Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:25:53.115Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e55293549f52142f1e7fc0"
+  },
+  "evaluation_id": {
+    "$oid": "61e544ecd1d18cec98626918"
+  },
+  "answered_by": {
+    "$oid": "61e54dd04d03f1f8a4c2c1d0"
+  },
+  "status": "submitted",
+  "submission_time": "18-01-2022",
+  "score": 4,
+  "assessed_by": {
+    "$oid": "61e53ff2c06c5cbfbaed4083"
+  },
+  "submission_link": "D:\\Unit-4-C4\\src\\uploads\\submissions\\1642418835429-Grey & White Minimal Resume.png",
+  "createdAt": {
+    "$date": "2022-01-17T11:27:15.502Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:27:15.502Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e552a3549f52142f1e7fc2"
+  },
+  "evaluation_id": {
+    "$oid": "61e544ecd1d18cec98626918"
+  },
+  "answered_by": {
+    "$oid": "61e54dbf4d03f1f8a4c2c1ce"
+  },
+  "status": "submitted",
+  "submission_time": "18-01-2022",
+  "score": 4,
+  "assessed_by": {
+    "$oid": "61e53ff2c06c5cbfbaed4083"
+  },
+  "submission_link": "D:\\Unit-4-C4\\src\\uploads\\submissions\\1642418851600-Grey & White Minimal Resume.png",
+  "createdAt": {
+    "$date": "2022-01-17T11:27:31.638Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:27:31.638Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e552c8549f52142f1e7fc4"
+  },
+  "evaluation_id": {
+    "$oid": "61e544ecd1d18cec98626918"
+  },
+  "answered_by": {
+    "$oid": "61e54db04d03f1f8a4c2c1cc"
+  },
+  "status": "submitted",
+  "submission_time": "16-01-2022",
+  "score": 9,
+  "assessed_by": {
+    "$oid": "61e53ff2c06c5cbfbaed4083"
+  },
+  "submission_link": "D:\\Unit-4-C4\\src\\uploads\\submissions\\1642418888938-Grey & White Minimal Resume.png",
+  "createdAt": {
+    "$date": "2022-01-17T11:28:08.980Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:28:08.980Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e552d9549f52142f1e7fc6"
+  },
+  "evaluation_id": {
+    "$oid": "61e544ecd1d18cec98626918"
+  },
+  "answered_by": {
+    "$oid": "61e54da44d03f1f8a4c2c1ca"
+  },
+  "status": "submitted",
+  "submission_time": "16-01-2022",
+  "score": 8,
+  "assessed_by": {
+    "$oid": "61e53ff2c06c5cbfbaed4083"
+  },
+  "submission_link": "D:\\Unit-4-C4\\src\\uploads\\submissions\\1642418905103-Grey & White Minimal Resume.png",
+  "createdAt": {
+    "$date": "2022-01-17T11:28:25.135Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:28:25.135Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e552e8549f52142f1e7fc8"
+  },
+  "evaluation_id": {
+    "$oid": "61e544ecd1d18cec98626918"
+  },
+  "answered_by": {
+    "$oid": "61e54d8f4d03f1f8a4c2c1c8"
+  },
+  "status": "submitted",
+  "submission_time": "16-01-2022",
+  "score": 6,
+  "assessed_by": {
+    "$oid": "61e53ff2c06c5cbfbaed4083"
+  },
+  "submission_link": "D:\\Unit-4-C4\\src\\uploads\\submissions\\1642418920310-Grey & White Minimal Resume.png",
+  "createdAt": {
+    "$date": "2022-01-17T11:28:40.327Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:28:40.327Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e552fa549f52142f1e7fca"
+  },
+  "evaluation_id": {
+    "$oid": "61e544ecd1d18cec98626918"
+  },
+  "answered_by": {
+    "$oid": "61e54ca44d03f1f8a4c2c1b3"
+  },
+  "status": "submitted",
+  "submission_time": "16-01-2022",
+  "score": 10,
+  "assessed_by": {
+    "$oid": "61e53ff2c06c5cbfbaed4083"
+  },
+  "submission_link": "D:\\Unit-4-C4\\src\\uploads\\submissions\\1642418938292-Grey & White Minimal Resume.png",
+  "createdAt": {
+    "$date": "2022-01-17T11:28:58.317Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:28:58.317Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e55309549f52142f1e7fcc"
+  },
+  "evaluation_id": {
+    "$oid": "61e544ecd1d18cec98626918"
+  },
+  "answered_by": {
+    "$oid": "61e54c884d03f1f8a4c2c1b1"
+  },
+  "status": "submitted",
+  "submission_time": "16-01-2022",
+  "score": 9,
+  "assessed_by": {
+    "$oid": "61e53ff2c06c5cbfbaed4083"
+  },
+  "submission_link": "D:\\Unit-4-C4\\src\\uploads\\submissions\\1642418953615-Grey & White Minimal Resume.png",
+  "createdAt": {
+    "$date": "2022-01-17T11:29:13.627Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:29:13.627Z"
+  }
+}]
