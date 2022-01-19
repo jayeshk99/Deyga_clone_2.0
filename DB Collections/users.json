@@ -1,0 +1,193 @@
+[{
+  "_id": {
+    "$oid": "61e53fe1c06c5cbfbaed4080"
+  },
+  "name": "swanand kadam",
+  "email": "swanand@a.com",
+  "password": "$2b$08$GxeavVQf4HTh./xd49vSl.vle1sBoIFhx8AdXfVBcR5G09eYkX8sO",
+  "roles": [
+    "teacher"
+  ],
+  "createdAt": {
+    "$date": "2022-01-17T10:07:29.612Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T10:07:29.612Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e53ff2c06c5cbfbaed4083"
+  },
+  "name": "dhaval",
+  "email": "dhaval@a.com",
+  "password": "$2b$08$SGoUoI6fkYF84l3CrE0q/.45mkoz1L1MPR1ErY4Pq8Yy7b95tdIGu",
+  "roles": [
+    "teacher"
+  ],
+  "createdAt": {
+    "$date": "2022-01-17T10:07:46.229Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T10:07:46.229Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e53ffcc06c5cbfbaed4086"
+  },
+  "name": "kamal",
+  "email": "kamal@a.com",
+  "password": "$2b$08$RWXVPNls23kYYKeCJvBlw.JV3JkaSj/zHcSsqr07b/t28wwzig3my",
+  "roles": [
+    "IA"
+  ],
+  "createdAt": {
+    "$date": "2022-01-17T10:07:56.335Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T10:07:56.335Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e54007c06c5cbfbaed4089"
+  },
+  "name": "Aleem",
+  "email": "aleem@a.com",
+  "password": "$2b$08$OsvrrcPYtb.IAHCOauMACOz8aGIhaVMH.4CJ9IsFj9RKgcbbdggRG",
+  "roles": [
+    "IA"
+  ],
+  "createdAt": {
+    "$date": "2022-01-17T10:08:07.345Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T10:08:07.345Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e54014c06c5cbfbaed408c"
+  },
+  "name": "Atul Kharwal",
+  "email": "atul@a.com",
+  "password": "$2b$08$tVSdQM5FvBWALbqnkey7LuBReET.LziyYITXp3VSgJr8kOSuWKRF2",
+  "roles": [
+    "student"
+  ],
+  "createdAt": {
+    "$date": "2022-01-17T10:08:20.390Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T10:08:20.390Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e54021c06c5cbfbaed408f"
+  },
+  "name": "Rahul Kumar",
+  "email": "rahul@a.com",
+  "password": "$2b$08$ISc/0WAJvjSWfDXtLgNmq.oiCQabe7mbKsAJZkB8mcW3jl1oweqvu",
+  "roles": [
+    "student"
+  ],
+  "createdAt": {
+    "$date": "2022-01-17T10:08:33.443Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T10:08:33.443Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e54d224d03f1f8a4c2c1b6"
+  },
+  "name": "Roshani Dumbhare",
+  "email": "roshani@a.com",
+  "password": "$2b$08$vTqa89Lfw9mgqqrY2G6FDebfN4YnxDA1RmHdPNN9ucIGVQeXWjroO",
+  "roles": [
+    "student"
+  ],
+  "createdAt": {
+    "$date": "2022-01-17T11:04:02.744Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:04:02.744Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e54d314d03f1f8a4c2c1b9"
+  },
+  "name": "Abhishek kumar mishra",
+  "email": "abhishek@a.com",
+  "password": "$2b$08$rlZDWeneuRRFmPZzlwgr/eS6ey.c6iLckUqd8AOnj1sMbNhDUZGI6",
+  "roles": [
+    "student"
+  ],
+  "createdAt": {
+    "$date": "2022-01-17T11:04:17.995Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:04:17.995Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e54d414d03f1f8a4c2c1bc"
+  },
+  "name": "Aniket Paygude",
+  "email": "aniket@a.com",
+  "password": "$2b$08$LCWNygyEWN.p4xFhzVRD3OnYo73BGf5ZOMisGSORfPC2ZBz7hQba.",
+  "roles": [
+    "student"
+  ],
+  "createdAt": {
+    "$date": "2022-01-17T11:04:33.388Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:04:33.388Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e54d554d03f1f8a4c2c1bf"
+  },
+  "name": "Jayesh",
+  "email": "jayesh@a.com",
+  "password": "$2b$08$UaUX98/.VkX2hYEpQhF7LObV5S95lw70D95A/sA7kM.NYq1Mih2vK",
+  "roles": [
+    "student"
+  ],
+  "createdAt": {
+    "$date": "2022-01-17T11:04:53.867Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:04:53.867Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e54d604d03f1f8a4c2c1c2"
+  },
+  "name": "Asnshul sharma",
+  "email": "anshul@a.com",
+  "password": "$2b$08$ljek6p8dJ0U1.ulX710Gl.C72SZ4lCuw7sx0glTPQ6oUbtbUvwvva",
+  "roles": [
+    "student"
+  ],
+  "createdAt": {
+    "$date": "2022-01-17T11:05:04.714Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:05:04.714Z"
+  }
+},{
+  "_id": {
+    "$oid": "61e54d744d03f1f8a4c2c1c5"
+  },
+  "name": "Neeraj shukla",
+  "email": "neeraj@a.com",
+  "password": "$2b$08$qvVkgH41x0soDU0Yvsk6leVuSxBBqh.d07abymAEiMNAsBgfyA1zG",
+  "roles": [
+    "student"
+  ],
+  "createdAt": {
+    "$date": "2022-01-17T11:05:24.875Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-17T11:05:24.875Z"
+  }
+}]
