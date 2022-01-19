@@ -1,0 +1,280 @@
+@font-face {
+  font-family: "Cartner Sans W01";
+  src: url("/font/carter-sans-w01.ttf") format("truetype");
+}
+
+body {
+  font-family: "Carter Sans", sans-serif;
+  /* font-weight: 400;
+  font-style: normal;
+  color: #454545;
+  background: #fff;
+   */
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+.stop-scroll {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+#path {
+  /* position: relative; */
+  height: 300px;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 3%;
+  /* justify-content: center; */
+}
+.linkPath {
+  text-decoration: none;
+  color: #454545;
+}
+#pathDiv {
+  margin-bottom: 5%;
+  margin-left: 3%;
+  text-decoration: none;
+}
+#productDetailContainer {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  gap: 7%;
+  /* height: 900px; */
+  position: relative;
+  border-bottom: 1px solid #454545;
+}
+#productImageContainer {
+  width: 47%;
+  height: 80%;
+  margin-left: 3%;
+  margin-bottom: 20px;
+}
+#productDescriptionContainer {
+  width: 45%;
+  height: 80%;
+}
+#productImgMain {
+  width: 100%;
+  height: 80%;
+  bottom: 15%;
+}
+#thumbNailDiv {
+  height: 12%;
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  gap: 2%;
+  justify-content: center;
+}
+#thumbImgSpan {
+  height: 90%;
+  padding: 1%;
+  width: 15%;
+  border: none;
+}
+
+#thumbImg {
+  height: 100%;
+  width: 100%;
+}
+#productNameDiv {
+  margin-bottom: 2%;
+}
+#productTitle {
+  font-size: 1.5rem;
+  padding: 0;
+  line-height: 2;
+}
+.checked {
+  color: #ffd200;
+}
+#ratingSpan {
+  margin-top: -25px;
+  vertical-align: top;
+  display: flex;
+  gap: 0.5%;
+  font-family: "Carter Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #454545;
+}
+#productPriceDiv {
+  margin-top: 5%;
+}
+#productPrice {
+  font-size: 23px;
+  font-weight: 600;
+  color: #9d9d9d;
+}
+#productSizeDiv {
+  margin-top: 5%;
+}
+#sizeType {
+  border: 1px solid;
+  display: block;
+  width: 10%;
+  padding: 1%;
+  text-align: center;
+  margin-top: -50;
+}
+#productQuantityDiv {
+  margin-top: 5%;
+}
+#quantityDiv {
+  border: 1px solid #e3e3e3;
+  width: 20%;
+  padding: 0.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  margin-top: 2%;
+  cursor: pointer;
+}
+.paraGreen {
+  margin-top: 7%;
+  color: green;
+}
+.addToCartBtn {
+  padding: 15px 50px;
+  width: 80%;
+  border: none;
+  border: 1px solid black;
+  background-color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.addToCart-hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.addToCart-hover-underline-animation:after {
+  content: "ADD TO CART";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  transform: scaleX(1);
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  transform-origin: bottom left;
+  transition: transform 0.4s ease-out;
+}
+.addToCart-hover-underline-animation:hover:after {
+  content: "";
+  transform: scaleX(0);
+  background-color: color;
+  transform-origin: bottom right;
+}
+
+.viewCarthover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.viewCarthover-underline-animation:after {
+  content: "PROCEED TO CART";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  transform: scaleX(1);
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  background-color: rgb(255, 97, 124);
+  color: white;
+  transform-origin: bottom left;
+  transition: transform 0.4s ease-out;
+}
+
+.viewCarthover-underline-animation:hover:after {
+  content: "";
+  transform: scaleX(0);
+  background-color: color;
+  transform-origin: bottom right;
+}
+#buyItNowBtn {
+  padding: 15px 50px;
+  width: 80%;
+  border: none;
+  border: 1px solid #e3e3e3;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.buyItNowBtnhover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.buyItNowBtnhover-underline-animation:after {
+  content: "BUY IT NOW";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  transform: scaleX(1);
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  background-color: white;
+  color: #9d9d9d;
+  transform-origin: bottom left;
+  transition: transform 0.4s ease-out;
+}
+
+.buyItNowBtnhover-underline-animation:hover:after {
+  content: "";
+  transform: scaleX(0);
+  background-color: color;
+  transform-origin: bottom right;
+}
+#naturalImgDiv {
+  height: 13%;
+  width: 80%;
+}
+#naturalImg {
+  height: 100%;
+  width: 100%;
+}
+#howToUseDiv {
+  display: flex;
+  margin-top: 2%;
+  padding: 1%;
+  gap: 2%;
+  width: 80%;
+  height: 6%;
+}
+.descBtn {
+  border: none;
+  padding: 2%;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  background-color: white;
+}
+#showDesc {
+  border: 1px solid #e3e3e3;
+  width: 75%;
+}
+#showDescImg {
+  width: 100%;
+}
