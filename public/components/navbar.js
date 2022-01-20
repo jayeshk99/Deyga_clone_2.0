@@ -75,7 +75,7 @@ let navbar = () => {
             <nav>
                 <div class="menu">
                     <ul>
-                        <li class="dropdown hover-underline-animation1"><a href="category.html"> Skin Care</a>
+                        <li class="dropdown hover-underline-animation1"><a href="/collection/skincare"> Skin Care</a>
                             <div class="dropdown-content">
                                 <ul>
                                     <li>Face Mask(Gel)</li>
@@ -93,7 +93,7 @@ let navbar = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li class="dropdown hover-underline-animation1"><a href="category.html"> Hair Care</a>
+                        <li class="dropdown hover-underline-animation1"><a href="/collection/haircare"> Hair Care</a>
                             <div class="dropdown-content">
                                 <ul>
                                     <li>Hair Care</li>
@@ -105,7 +105,7 @@ let navbar = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li class="dropdown hover-underline-animation1"><a href="category.html"> Bath & Body</a>
+                        <li class="dropdown hover-underline-animation1"><a href="/collection/bath&body"> Bath & Body</a>
                             <div class="dropdown-content">
                                 <ul>
                                     <li>HandMade Soap</li>
@@ -117,7 +117,7 @@ let navbar = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li class="dropdown hover-underline-animation1"><a href="category.html"> Oral Care</a>
+                        <li class="dropdown hover-underline-animation1"><a href="/collection/oralcare"> Oral Care</a>
                             <div class="dropdown-content">
                                 <ul>
                                     <li>Tooth Powder</li>
@@ -125,7 +125,7 @@ let navbar = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li class="dropdown hover-underline-animation1"><a href="category.html"> Wellness</a>
+                        <li class="dropdown hover-underline-animation1"><a href="/collection/wellness"> Wellness</a>
                             <div class="dropdown-content">
                                 <ul>
                                     <li>Cold Pressed Oil</li>
@@ -134,7 +134,7 @@ let navbar = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li class="dropdown hover-underline-animation1"><a href="category.html"> Baby Care</a>
+                        <li class="dropdown hover-underline-animation1"><a href="/collection/babycare"> Baby Care</a>
                             <div class="dropdown-content">
                                 <ul>
                                     <li>Baby Soap</li>
@@ -144,7 +144,7 @@ let navbar = () => {
                                     </ul>
                                     </div>
                                     </li>
-                                    <li class="dropdown hover-underline-animation1"><a href="category.html"> Men</a>
+                                    <li class="dropdown hover-underline-animation1"><a href="/collection/men"> Men</a>
                                         <div class="dropdown-content">
                                             <ul>
                                                 <li>Men Bath Soap</li>
@@ -154,7 +154,7 @@ let navbar = () => {
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="dropdown hover-underline-animation1"><a href="category.html"> Combo</a>
+                                    <li class="dropdown hover-underline-animation1"><a href="/collection/combo"> Combo</a>
                                         </li>
                 <li class="dropdown hover-underline-animation1"><a href="#"> Gifting</a>
                     <div class="dropdown-content">

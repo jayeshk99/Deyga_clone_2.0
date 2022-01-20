@@ -11,6 +11,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 const userController = require("./controllers/user.controller");
+const productController = require("./controllers/product.controller");
 
 const { register, login } = require("./controllers/auth.controller");
 
@@ -23,9 +24,7 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/category", (req, res) => {
-  res.render("category");
-});
+app.use("/collection", productController);
 
 app.get("/checkout", (req, res) => {
   res.render("checkout");

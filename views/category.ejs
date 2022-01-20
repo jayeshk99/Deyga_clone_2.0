@@ -1,62 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/category.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Document</title>
-  <link rel="stylesheet" href="css/category.css" />
+    <!-- material icons link -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
-  <!-- material icons link -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- navbar css -->
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <!-- footer css -->
+    <link rel="stylesheet" href="../css/footer.css" />
+    <!-- cart css -->
+    <link rel="stylesheet" href="../css/cart.css" />
 
-  <!-- navbar css -->
-  <link rel="stylesheet" href="css/navbar.css" />
-  <!-- footer css -->
-  <link rel="stylesheet" href="css/footer.css" />
-  <!-- cart css -->
-  <link rel="stylesheet" href="css/cart.css" />
+    <!-- rating stars link -->
+    <script
+      src="https://kit.fontawesome.com/a52cae5fae.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- rating stars link -->
-  <script src="https://kit.fontawesome.com/a52cae5fae.js" crossorigin="anonymous"></script>
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <!-- font link -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet" />
-</head>
-
-<body>
-  <header id="navbar">
-    <!-- <button onclick="disableBodyScrollCart()">cart</button> -->
-  </header>
-  <div id="productShowPart">
-    <div id="productShowHeader">
-      <div id="pageTracker">
-        <a href="index.html" class="linkPath">Home ></a>
-        <a href="category.html" class="linkPath" id="linkTitle"> </a>
+  <body>
+    <header id="navbar">
+      <!-- <button onclick="disableBodyScrollCart()">cart</button> -->
+    </header>
+    <div id="productShowPart">
+      <div id="productShowHeader">
+        <div id="pageTracker">
+          <a href="index.html" class="linkPath">Home ></a>
+          <a href="category.html" class="linkPath" id="linkTitle"> </a>
+        </div>
+        <div id="categoryTitle"></div>
       </div>
-      <div id="categoryTitle"></div>
-    </div>
 
-    <div id="productSort">
-      <div id="productSortIcon">
-        <p>Sort</p>
-        <span class="material-icons">expand_more</span>
+      <div id="productSort">
+        <div id="productSortIcon">
+          <p>Sort</p>
+          <span class="material-icons">expand_more</span>
+        </div>
+        <div id="sortList">
+          <ul>
+            <li>Alphabetically A to Z</li>
+            <li>Alphabetically Z to A</li>
+            <li>Price Low to High</li>
+            <li>Price High to Low</li>
+          </ul>
+        </div>
       </div>
-      <div id="sortList">
-        <ul>
-          <li>Alphabetically A to Z</li>
-          <li>Alphabetically Z to A</li>
-          <li>Price Low to High</li>
-          <li>Price High to Low</li>
-        </ul>
-      </div>
-    </div>
+      <p><%= products[1].category%></p>
+      <div id="productGrid">
+        <% products.forEach(item => { %>
+        <div class="productCard">
+          <div class="prductImgDiv">
+            <img src="<%" ="item.productImgUrl2[0]" % />
+            class="productImg">
+          </div>
+          <div class="productDetailsDiv">
+            <div class="productNameDiv"><%= item.productName %></div>
+            <div class="productReviewsDiv">
+              <span>
+                <i class="fas fa-star checked"></i>
+                <i class="fas fa-star checked"></i>
+                <i class="fas fa-star checked"></i>
+                <i class="fas fa-star checked"></i>
+                <i class="fas fa-star checked"></i>
+              </span>
+              <span> <%= item.totalReview %> reviews</span>
+            </div>
+            <div class="productPriceDiv">
+              <span> MRP Rs.<%= item.price %> </span>
+            </div>
+          </div>
+        </div>
+        <% }) %>
 
-    <div id="productGrid">
-      <!-- <div class="productCard">
+        <!-- <div class="productCard">
                 <div class="prductImgDiv">
                     <img src="https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Untitleddesign_7_600x.jpg?v=1623384450"
                         class="productImg">
@@ -82,37 +115,35 @@
                     </div>
                 </div>
             </div> -->
+      </div>
     </div>
-
-    </div>
-  <footer></footer>
-  <div id="cart"></div>
-</body>
-
+    <footer></footer>
+    <div id="cart"></div>
+  </body>
 </html>
 <script type="module">
   /** @format */
 
-// ------------Importing functions----------------
-import { navbar, footer } from "./components/navbar.js";
-import { appendCart } from "./scripts//cart.js";
-import { cartComp } from "./components/cart.js";
-import { setDataToLocal } from "./scripts/data.js";
+  // ------------Importing functions----------------
+  import { navbar, footer } from "../components/navbar.js";
+  import { appendCart } from "../scripts//cart.js";
+  import { cartComp } from "../components/cart.js";
+  import { setDataToLocal } from "../scripts/data.js";
 
-let navComp = navbar();
-let footerComp = footer();
+  let navComp = navbar();
+  let footerComp = footer();
 
-let headerPart = document.getElementById("navbar");
-headerPart.innerHTML = navComp;
+  let headerPart = document.getElementById("navbar");
+  headerPart.innerHTML = navComp;
 
-let cartPart = document.getElementById("cart");
-cartPart.innerHTML = cartComp();
+  let cartPart = document.getElementById("cart");
+  cartPart.innerHTML = cartComp();
 
-let footerPart = document.querySelector("footer");
-footerPart.innerHTML = footerComp;
+  let footerPart = document.querySelector("footer");
+  footerPart.innerHTML = footerComp;
 
-setDataToLocal();
-let currUser = JSON.parse(localStorage.getItem("loginUser")) || 0;
+  // setDataToLocal();
+  let currUser = JSON.parse(localStorage.getItem("loginUser")) || 0;
   console.log(currUser);
   if (currUser != 0) {
     document.getElementById("User").textContent = currUser["username"];
@@ -160,54 +191,54 @@ let currUser = JSON.parse(localStorage.getItem("loginUser")) || 0;
     enableBodyScroll();
   });
 
- // category click function
- document
-    .querySelector(".menu>ul>li:nth-child(1)")
-    .addEventListener("click", () => {
-      localStorage.setItem("clickedCategory", JSON.stringify("skinCare"));
-    });
-  document
-    .querySelector(".menu>ul>li:nth-child(2)")
-    .addEventListener("click", () => {
-      localStorage.setItem("clickedCategory", JSON.stringify("hairCareData"));
-    });
-  document
-    .querySelector(".menu>ul>li:nth-child(3)")
-    .addEventListener("click", () => {
-      localStorage.setItem("clickedCategory", JSON.stringify("bathBody"));
-    });
-  document
-    .querySelector(".menu>ul>li:nth-child(4)")
-    .addEventListener("click", () => {
-      localStorage.setItem("clickedCategory", JSON.stringify("OralCare"));
-    });
-  document
-    .querySelector(".menu>ul>li:nth-child(5)")
-    .addEventListener("click", () => {
-      localStorage.setItem("clickedCategory", JSON.stringify("wellNess"));
-    });
-  document
-    .querySelector(".menu>ul>li:nth-child(6)")
-    .addEventListener("click", () => {
-      localStorage.setItem("clickedCategory", JSON.stringify("babyCareProduct"));
-    });
-  document
-    .querySelector(".menu>ul>li:nth-child(7)")
-    .addEventListener("click", () => {
-      localStorage.setItem("clickedCategory", JSON.stringify("menProduct"));
-    });
-  document
-    .querySelector(".menu>ul>li:nth-child(8)")
-    .addEventListener("click", () => {
-      localStorage.setItem("clickedCategory", JSON.stringify("comboProduct"));
-    });
+  // category click function
+  //  document
+  //     .querySelector(".menu>ul>li:nth-child(1)")
+  //     .addEventListener("click", () => {
+  //       localStorage.setItem("clickedCategory", JSON.stringify("skinCare"));
+  //     });
+  //   document
+  //     .querySelector(".menu>ul>li:nth-child(2)")
+  //     .addEventListener("click", () => {
+  //       localStorage.setItem("clickedCategory", JSON.stringify("hairCareData"));
+  //     });
+  //   document
+  //     .querySelector(".menu>ul>li:nth-child(3)")
+  //     .addEventListener("click", () => {
+  //       localStorage.setItem("clickedCategory", JSON.stringify("bathBody"));
+  //     });
+  //   document
+  //     .querySelector(".menu>ul>li:nth-child(4)")
+  //     .addEventListener("click", () => {
+  //       localStorage.setItem("clickedCategory", JSON.stringify("OralCare"));
+  //     });
+  //   document
+  //     .querySelector(".menu>ul>li:nth-child(5)")
+  //     .addEventListener("click", () => {
+  //       localStorage.setItem("clickedCategory", JSON.stringify("wellNess"));
+  //     });
+  //   document
+  //     .querySelector(".menu>ul>li:nth-child(6)")
+  //     .addEventListener("click", () => {
+  //       localStorage.setItem("clickedCategory", JSON.stringify("babyCareProduct"));
+  //     });
+  //   document
+  //     .querySelector(".menu>ul>li:nth-child(7)")
+  //     .addEventListener("click", () => {
+  //       localStorage.setItem("clickedCategory", JSON.stringify("menProduct"));
+  //     });
+  //   document
+  //     .querySelector(".menu>ul>li:nth-child(8)")
+  //     .addEventListener("click", () => {
+  //       localStorage.setItem("clickedCategory", JSON.stringify("comboProduct"));
+  //     });
 
-    //cartitems
-    let cartitemsNo = JSON.parse(localStorage.getItem("cartData"));
+  //cartitems
+  let cartitemsNo = JSON.parse(localStorage.getItem("cartData"));
   if (cartitemsNo) {
-    cartitemsNo = cartitemsNo.length
+    cartitemsNo = cartitemsNo.length;
   } else {
-    cartitemsNo = 0
+    cartitemsNo = 0;
   }
   console.log(cartitemsNo);
   let cartLengthShow = document.querySelector(".dropdown+li>p>b");
@@ -340,8 +371,8 @@ let currUser = JSON.parse(localStorage.getItem("loginUser")) || 0;
       break;
     }
   }
-  console.log(productData);
-  appendData(productData);
+  // console.log(productData);
+  // appendData(productData);
 
   // ------Sort Function --------
 
@@ -416,7 +447,9 @@ let currUser = JSON.parse(localStorage.getItem("loginUser")) || 0;
     let N = productData.length;
     for (var i = 0; i < N - 1; i++) {
       for (var j = 0; j < N - i - 1; j++) {
-        if (!order(productData[j].productName, productData[j + 1].productName)) {
+        if (
+          !order(productData[j].productName, productData[j + 1].productName)
+        ) {
           let temp = productData[j];
           productData[j] = productData[j + 1];
           productData[j + 1] = temp;
@@ -445,7 +478,6 @@ let currUser = JSON.parse(localStorage.getItem("loginUser")) || 0;
     .addEventListener("click", highSort);
 
   // updating cart items value in navbar
-
 
   // appending rating stars
 
