@@ -14,7 +14,7 @@
 
 <body>
     <header id="navbar">
-
+        <%- include("./components/navbar") %>
     </header>
     <div id="sp-container">
         <div id="search-modal-container">
@@ -69,7 +69,7 @@
 
     </div>
     <footer>
-
+        <%- include("./components/footer") %> 
     </footer>
     <div id="cart"></div>
 </body>
@@ -119,68 +119,26 @@
 
     }
 </script>
+<script src="../scripts/login.js"></script>
+<script src="../scripts/commonFunctions.js"></script>
+
 <script type="module">
-    import { navbar, footer } from "./components/navbar.js";
-    let header = document.querySelector("header");
-    let footerhtml = document.querySelector("footer");
-    import { appendCart } from "./scripts/cart.js";
-  import { cartComp } from "./components/cart.js";
-  
-  let cartPart = document.getElementById("cart");
-  cartPart.innerHTML = cartComp();
+//   // -------------for cart---------------------
+//   let cartBtn = document.querySelector("#submenu>ul>li:nth-child(2)");
+//   cartBtn.addEventListener("click", () => {
+//     document.getElementById("cart").style.display = "block";
+//     window.scrollTo(0, 0);
+//     appendCart();
+//     document.getElementById("cart").style.marginLeft = "0%";
+//     disableBodyScroll();
+//     document.querySelector("body").style.overflowY = "hidden";
+// })
 
-    header.innerHTML = navbar();
-    footerhtml.innerHTML = footer();
-
-
-    let currUser = JSON.parse(localStorage.getItem("loginUser")) || 0;
-  
-    if (currUser != 0) {
-        document.getElementById("User").textContent = currUser["username"];
-        document.getElementById("logoutUser").style.display = "none";
-        document.getElementById("loginUser").style.display = "block";
-    } else {
-        document.getElementById("User").textContent = "Account";
-        document.getElementById("logoutUser").style.display = "block";
-        document.getElementById("loginUser").style.display = "none";
-    }
-
-    document.getElementById("logout").addEventListener("click", function () {
-        currUser = 0;
-        document.getElementById("User").textContent = "Account";
-        document.getElementById("logoutUser").style.display = "block";
-        document.getElementById("loginUser").style.display = "none";
-        localStorage.setItem("loginUser", JSON.stringify(currUser));
-        window.location.href = "loginpage.html";
-    })
-
-
-    // ----------- disabling and enabling body scroll ----------
-
-  function disableBodyScroll() {
-    const element = document.querySelector("body");
-    element.classList.add("stop-scroll");
-  }
-  function enableBodyScroll() {
-    const element = document.querySelector("body");
-    element.classList.remove("stop-scroll");
-  }
-  // -------------for cart---------------------
-  let cartBtn = document.querySelector("#submenu>ul>li:nth-child(2)");
-  cartBtn.addEventListener("click", () => {
-    document.getElementById("cart").style.display = "block";
-    window.scrollTo(0, 0);
-    appendCart();
-    document.getElementById("cart").style.marginLeft = "0%";
-    disableBodyScroll();
-    document.querySelector("body").style.overflowY = "hidden";
-})
-
-let cartCloseBtn = document.querySelector(".cartClose");
-cartCloseBtn.addEventListener("click", () => {
-    document.getElementById("cart").style.marginLeft = "100%"
-    enableBodyScroll();
-    document.querySelector("body").style.overflowY = "scroll";
-})
-//end cart
-</script>
+// let cartCloseBtn = document.querySelector(".cartClose");
+// cartCloseBtn.addEventListener("click", () => {
+//     document.getElementById("cart").style.marginLeft = "100%"
+//     enableBodyScroll();
+//     document.querySelector("body").style.overflowY = "scroll";
+// })
+// //end cart
+// </script>
