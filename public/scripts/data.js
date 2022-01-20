@@ -1114,4 +1114,4 @@ function setDataToLocal() {
   localStorage.setItem("OralCare", JSON.stringify(OralCare));
   localStorage.setItem("wellNess", JSON.stringify(wellNess));
 }
-export { setDataToLocal };
+setDataToLocal();
