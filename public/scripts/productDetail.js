@@ -186,6 +186,10 @@ plusBtn.addEventListener("click", function () {
   productDetailData.productQuantity++;
   showQuantity.textContent = productDetailData.productQuantity;
 });
+
+function increaseQuantity(data){
+  console.log(data);
+}
 quantityDiv.append(minusBtn, showQuantity, plusBtn);
 productQuantityDiv.append(quantitySpan, quantityDiv);
 let freeDilv = document.createElement("p");

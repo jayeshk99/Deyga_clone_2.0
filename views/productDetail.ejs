@@ -1,34 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Detail</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Product Detail</title>
+    <link rel="stylesheet" href="/css/productDetail.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/cart.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="/css/productDetail.css" />
-  <link rel="stylesheet" href="/css/navbar.css" />
-  <link rel="stylesheet" href="/css/cart.css" />
-  <link rel="stylesheet" href="/css/footer.css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/0db1e4ee93.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-  <script src="https://kit.fontawesome.com/0db1e4ee93.js" crossorigin="anonymous"></script>
-</head>
-
-<body>  
-  <header id="navbar"></header>
-  <div id="mainContainerPorduct">
-    <div id="path">;lkjsfl;kj</div>
-    <div id="productDetailContainer">
-      <div id="productImageContainer"></div>
-      <div id="productDescriptionContainer"></div>
+  <body>
+    <header id="navbar"></header>
+    <div id="mainContainerPorduct">
+      <div id="path">
+        <div id="pathDiv">
+          <a href="index.html" class="linkPath">Home &gt;</a>
+          <a href="category.html" class="linkPath" id="clickedCat"
+            >Skin Care &gt;</a
+          >
+          <a href="" class="linkPath"><%= product.productName %></a>
+        </div>
+      </div>
+      <div id="productDetailContainer">
+        <div id="productImageContainer">
+          <img  src= <%= product.productImgUrl2[0] %>
+          id="productImgMain">
+          <div id="thumbNailDiv">
+            <% product.productImgUrl2.forEach(image =>{ %>
+              <span id="thumbImgSpan" style="border: 1px solid"
+              ><img src= <%= image %>
+                id="thumbImg" />
+              </span>
+           <% }) %>
+           
+          </div>
+        </div>
+        <div id="productDescriptionContainer">
+          <div id="productNameDiv">
+            <h1 id="productTitle"><%= product.productName %></h1>
+            <span id="ratingSpan"
+              ><span
+                ><i class="fas fa-star checked" aria-hidden="true"></i></span
+              ><span
+                ><i class="fas fa-star checked" aria-hidden="true"></i></span
+              ><span
+                ><i class="fas fa-star checked" aria-hidden="true"></i></span
+              ><span
+                ><i class="fas fa-star checked" aria-hidden="true"></i></span
+              ><span
+                ><i class="fas fa-star checked" aria-hidden="true"></i></span
+              ><span><%= product.totalReview %>review</span></span
+            >
+            <div id="productPriceDiv">
+              <span id="productPrice">Rs. <%= product.price %></span>
+            </div>
+          </div>
+          <div id="productSizeDiv">
+            <span>Size:</span><span id="sizeType"><%= product.productSize %></span>
+          </div>
+          <div id="productQuantityDiv">
+            <span>Quantity:</span>
+            <div id="quantityDiv">
+              <span onclick="increaseQuantity()" class="quantityBtn">-</span><span id="showQuantity"><%= product.productQuantity %></span
+              ><span onclick=increaseQuantity(product.productQuantity)" class="quantityBtn">+</span>
+            </div>
+          </div>
+          <p class="paraGreen">
+            Get free shipping on prepaid orders above Rs. 1400
+          </p>
+          <div id="btnDiv">
+            <button class="addToCart-hover-underline-animation addToCartBtn">
+              ADD TO CART</button
+            ><button
+              class="viewCarthover-underline-animation addToCartBtn"
+              style="display: none"
+            >
+              PROCEED TO CART</button
+            ><button
+              id="buyItNowBtn"
+              class="buyItNowBtnhover-underline-animation"
+            >
+              BUY IT NOW
+            </button>
+          </div>
+          <div id="naturalImgDiv">
+            <img
+              id="naturalImg"
+              src="https://cdn.shopify.com/s/files/1/0034/7901/1441/files/Untitled_design_1_ffb99d9a-dabf-45a3-b489-fcca97415010.png?v=1595966482"
+            />
+          </div>
+          <div id="howToUseDiv">
+            <button class="descBtn">Description</button
+            ><button class="descBtn">How to Use</button>
+          </div>
+          <div id="showDesc"></div>
+        </div>
+      </div>
+      <footer></footer>
     </div>
-    <footer></footer>
-  </div>
 
-  <div id="cart"></div>
-</body>
-
+    <div id="cart"></div>
+  </body>
 </html>
 <script src="/scripts/productDetail.js" type="module"></script>
