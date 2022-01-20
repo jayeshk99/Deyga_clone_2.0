@@ -38,9 +38,9 @@ app.get("/payment", (req, res) => {
   res.render("payment");
 });
 
-app.get("/productDetail", (req, res) => {
-  res.render("productDetail");
-});
+// app.get("/productDetail", (req, res) => {
+//   res.render("productDetail");
+// });
 
 app.get("/signup", (req, res) => {
   res.render("signup");
