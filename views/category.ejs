@@ -59,7 +59,7 @@
 
       
         <% products.forEach(item => { %>
-
+          <a href= "/collection/productDetail/<%= item._id %>">
            <div class="productCard">
                 <div class="prductImgDiv">
                     <img src= <%= item.productImgUrl2[0] %>
@@ -86,7 +86,7 @@
                     </div>
                 </div>
             </div>
-
+          </a>
         <% }) %>
       
       <!-- <div class="productCard">
