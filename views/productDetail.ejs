@@ -22,7 +22,7 @@
   </head>
 
   <body>
-    <header id="navbar"></header>
+    <header id="navbar"><%- include("./components/navbar") %> </header>
     <div id="mainContainerPorduct">
       <div id="path">
         <div id="pathDiv">
@@ -108,10 +108,12 @@
           <div id="showDesc"></div>
         </div>
       </div>
-      <footer></footer>
+      <footer><%- include("./components/footer") %> </footer>
     </div>
 
-    <div id="cart"></div>
+    <div id="cart"><%- include("./components/cart") %></div>
   </body>
 </html>
-<script src="/scripts/productDetail.js" type="module"></script>
+<script src="/scripts/productDetail.js"></script>
+<script src="/scripts/cart.js"></script>
+<script src="/scripts/commonFunctions.js"></script>
