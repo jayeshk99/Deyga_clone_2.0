@@ -6,17 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Document</title>
-  <link rel="stylesheet" href="css/category.css" />
+  <link rel="stylesheet" href="../css/category.css" />
 
   <!-- material icons link -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
   <!-- navbar css -->
-  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
   <!-- footer css -->
-  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
   <!-- cart css -->
-  <link rel="stylesheet" href="css/cart.css" />
+  <link rel="stylesheet" href="../css/cart.css" />
 
   <!-- rating stars link -->
   <script src="https://kit.fontawesome.com/a52cae5fae.js" crossorigin="anonymous"></script>
@@ -54,8 +54,41 @@
         </ul>
       </div>
     </div>
-
+    <p><%= products[1].category%></p>
     <div id="productGrid">
+
+      
+        <% products.forEach(item => { %>
+
+           <div class="productCard">
+                <div class="prductImgDiv">
+                    <img src= <%= item.productImgUrl2[0] %>
+                        class="productImg">
+                </div>
+                <div class="productDetailsDiv">
+                    <div class="productNameDiv">
+                        Beautifying Serum
+                    </div>
+                    <div class="productReviewsDiv">
+                        <span>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                        </span>
+                        <span> 121 reviews</span>
+                    </div>
+                    <div class="productPriceDiv">
+                        <span>
+                            MRP Rs.730
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        <% }) %>
+      
       <!-- <div class="productCard">
                 <div class="prductImgDiv">
                     <img src="https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Untitleddesign_7_600x.jpg?v=1623384450"
@@ -93,11 +126,12 @@
 <script type="module">
   /** @format */
 
+
 // ------------Importing functions----------------
-import { navbar, footer } from "./components/navbar.js";
-import { appendCart } from "./scripts//cart.js";
-import { cartComp } from "./components/cart.js";
-import { setDataToLocal } from "./scripts/data.js";
+import { navbar, footer } from "../components/navbar.js";
+import { appendCart } from "../scripts//cart.js";
+import { cartComp } from "../components/cart.js";
+import { setDataToLocal } from "../scripts/data.js";
 
 let navComp = navbar();
 let footerComp = footer();
@@ -111,7 +145,7 @@ cartPart.innerHTML = cartComp();
 let footerPart = document.querySelector("footer");
 footerPart.innerHTML = footerComp;
 
-setDataToLocal();
+// setDataToLocal();
 let currUser = JSON.parse(localStorage.getItem("loginUser")) || 0;
   console.log(currUser);
   if (currUser != 0) {
@@ -161,46 +195,46 @@ let currUser = JSON.parse(localStorage.getItem("loginUser")) || 0;
   });
 
  // category click function
- document
-    .querySelector(".menu>ul>li:nth-child(1)")
-    .addEventListener("click", () => {
-      localStorage.setItem("clickedCategory", JSON.stringify("skinCare"));
-    });
-  document
-    .querySelector(".menu>ul>li:nth-child(2)")
-    .addEventListener("click", () => {
-      localStorage.setItem("clickedCategory", JSON.stringify("hairCareData"));
-    });
-  document
-    .querySelector(".menu>ul>li:nth-child(3)")
-    .addEventListener("click", () => {
-      localStorage.setItem("clickedCategory", JSON.stringify("bathBody"));
-    });
-  document
-    .querySelector(".menu>ul>li:nth-child(4)")
-    .addEventListener("click", () => {
-      localStorage.setItem("clickedCategory", JSON.stringify("OralCare"));
-    });
-  document
-    .querySelector(".menu>ul>li:nth-child(5)")
-    .addEventListener("click", () => {
-      localStorage.setItem("clickedCategory", JSON.stringify("wellNess"));
-    });
-  document
-    .querySelector(".menu>ul>li:nth-child(6)")
-    .addEventListener("click", () => {
-      localStorage.setItem("clickedCategory", JSON.stringify("babyCareProduct"));
-    });
-  document
-    .querySelector(".menu>ul>li:nth-child(7)")
-    .addEventListener("click", () => {
-      localStorage.setItem("clickedCategory", JSON.stringify("menProduct"));
-    });
-  document
-    .querySelector(".menu>ul>li:nth-child(8)")
-    .addEventListener("click", () => {
-      localStorage.setItem("clickedCategory", JSON.stringify("comboProduct"));
-    });
+//  document
+//     .querySelector(".menu>ul>li:nth-child(1)")
+//     .addEventListener("click", () => {
+//       localStorage.setItem("clickedCategory", JSON.stringify("skinCare"));
+//     });
+//   document
+//     .querySelector(".menu>ul>li:nth-child(2)")
+//     .addEventListener("click", () => {
+//       localStorage.setItem("clickedCategory", JSON.stringify("hairCareData"));
+//     });
+//   document
+//     .querySelector(".menu>ul>li:nth-child(3)")
+//     .addEventListener("click", () => {
+//       localStorage.setItem("clickedCategory", JSON.stringify("bathBody"));
+//     });
+//   document
+//     .querySelector(".menu>ul>li:nth-child(4)")
+//     .addEventListener("click", () => {
+//       localStorage.setItem("clickedCategory", JSON.stringify("OralCare"));
+//     });
+//   document
+//     .querySelector(".menu>ul>li:nth-child(5)")
+//     .addEventListener("click", () => {
+//       localStorage.setItem("clickedCategory", JSON.stringify("wellNess"));
+//     });
+//   document
+//     .querySelector(".menu>ul>li:nth-child(6)")
+//     .addEventListener("click", () => {
+//       localStorage.setItem("clickedCategory", JSON.stringify("babyCareProduct"));
+//     });
+//   document
+//     .querySelector(".menu>ul>li:nth-child(7)")
+//     .addEventListener("click", () => {
+//       localStorage.setItem("clickedCategory", JSON.stringify("menProduct"));
+//     });
+//   document
+//     .querySelector(".menu>ul>li:nth-child(8)")
+//     .addEventListener("click", () => {
+//       localStorage.setItem("clickedCategory", JSON.stringify("comboProduct"));
+//     });
 
     //cartitems
     let cartitemsNo = JSON.parse(localStorage.getItem("cartData"));
@@ -340,8 +374,8 @@ let currUser = JSON.parse(localStorage.getItem("loginUser")) || 0;
       break;
     }
   }
-  console.log(productData);
-  appendData(productData);
+  // console.log(productData);
+  // appendData(productData);
 
   // ------Sort Function --------
 
