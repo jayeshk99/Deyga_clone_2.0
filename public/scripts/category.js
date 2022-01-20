@@ -1,71 +1,38 @@
-/** @format */
+// /** @format */
 
-// ------------Importing functions----------------
-import { navbar, footer } from "../components/navbar.js";
-import { appendCart } from "./cart.js";
-import { cartComp } from "../components/cart.js";
-import { setDataToLocal } from "./data.js";
-
-let navComp = navbar();
-let footerComp = footer();
-
-let headerPart = document.getElementById("navbar");
-headerPart.innerHTML = navComp;
-
-let cartPart = document.getElementById("cart");
-cartPart.innerHTML = cartComp();
-
-let footerPart = document.querySelector("footer");
-footerPart.innerHTML = footerComp;
-
-setDataToLocal();
 
 let currUser = JSON.parse(localStorage.getItem("loginUser")) || 0;
-console.log(currUser);
-if (currUser != 0) {
-  document.getElementById("User").textContent = currUser["username"];
-  document.getElementById("logoutUser").style.display = "none";
-  document.getElementById("loginUser").style.display = "block";
-} else {
-  document.getElementById("User").textContent = "Account";
-  document.getElementById("logoutUser").style.display = "block";
-  document.getElementById("loginUser").style.display = "none";
-}
+  console.log(currUser);
+  if (currUser != 0) {
+    document.getElementById("User").textContent = currUser["username"];
+    document.getElementById("logoutUser").style.display = "none";
+    document.getElementById("loginUser").style.display = "block";
+  } else {
+    document.getElementById("User").textContent = "Account";
+    document.getElementById("logoutUser").style.display = "block";
+    document.getElementById("loginUser").style.display = "none";
+  }
 
-document.getElementById("logout").addEventListener("click", function () {
-  currUser = 0;
-  document.getElementById("User").textContent = "Account";
-  document.getElementById("logoutUser").style.display = "block";
-  document.getElementById("loginUser").style.display = "none";
-  localStorage.setItem("loginUser", JSON.stringify(currUser));
-  window.location.href = "loginpage.html";
-});
-// ----------- disabling and enabling body scroll ----------
+  document.getElementById("logout").addEventListener("click", function () {
+    currUser = 0;
+    document.getElementById("User").textContent = "Account";
+    document.getElementById("logoutUser").style.display = "block";
+    document.getElementById("loginUser").style.display = "none";
+    localStorage.setItem("loginUser", JSON.stringify(currUser));
+    window.location.href = "loginpage.html";
+  });
 
-function disableBodyScroll() {
-  const element = document.querySelector("body");
-  element.classList.add("stop-scroll");
-}
-function enableBodyScroll() {
-  const element = document.querySelector("body");
-  element.classList.remove("stop-scroll");
-}
-
-// -------------for cart---------------------
-let cartBtn = document.querySelector("#submenu>ul>li:nth-child(2)");
-cartBtn.addEventListener("click", () => {
-  document.getElementById("cart").style.display = "block";
-  window.scrollTo(0, 0);
-  appendCart();
-  document.getElementById("cart").style.marginLeft = "0%";
-  disableBodyScroll();
-});
-
-let cartCloseBtn = document.querySelector(".cartClose");
-cartCloseBtn.addEventListener("click", () => {
-  document.getElementById("cart").style.marginLeft = "100%";
-  enableBodyScroll();
-});
+    //cartitems
+    let cartitemsNo = JSON.parse(localStorage.getItem("cartData"));
+  if (cartitemsNo) {
+    cartitemsNo = cartitemsNo.length
+  } else {
+    cartitemsNo = 0
+  }
+  console.log(cartitemsNo);
+  let cartLengthShow = document.querySelector(".dropdown+li>p>b");
+  console.log(cartLengthShow);
+  cartLengthShow.innerText = `Cart (${cartitemsNo})`;
 
 // ---------------for sort--------------------
 let x = 1;
@@ -314,45 +281,3 @@ cartLengthShow.innerText = `Cart (${cartitemsNo})`;
 //     ratingSpan.append(starSpan);
 //     i++;
 // }
-
-// category click function
-document
-  .querySelector(".menu>ul>li:nth-child(1)")
-  .addEventListener("click", () => {
-    localStorage.setItem("clickedCategory", JSON.stringify("skinCare"));
-  });
-document
-  .querySelector(".menu>ul>li:nth-child(2)")
-  .addEventListener("click", () => {
-    localStorage.setItem("clickedCategory", JSON.stringify("hairCareData"));
-  });
-document
-  .querySelector(".menu>ul>li:nth-child(3)")
-  .addEventListener("click", () => {
-    localStorage.setItem("clickedCategory", JSON.stringify("bathBody"));
-  });
-document
-  .querySelector(".menu>ul>li:nth-child(4)")
-  .addEventListener("click", () => {
-    localStorage.setItem("clickedCategory", JSON.stringify("OralCare"));
-  });
-document
-  .querySelector(".menu>ul>li:nth-child(5)")
-  .addEventListener("click", () => {
-    localStorage.setItem("clickedCategory", JSON.stringify("wellNess"));
-  });
-document
-  .querySelector(".menu>ul>li:nth-child(6)")
-  .addEventListener("click", () => {
-    localStorage.setItem("clickedCategory", JSON.stringify("babyCareProduct"));
-  });
-document
-  .querySelector(".menu>ul>li:nth-child(7)")
-  .addEventListener("click", () => {
-    localStorage.setItem("clickedCategory", JSON.stringify("menProduct"));
-  });
-document
-  .querySelector(".menu>ul>li:nth-child(8)")
-  .addEventListener("click", () => {
-    localStorage.setItem("clickedCategory", JSON.stringify("comboProduct"));
-  });

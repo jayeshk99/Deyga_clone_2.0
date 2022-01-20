@@ -115,9 +115,36 @@ function appendCart() {
 
 
 }
-
+console.log("hi from cart")
 function setPayDetail() {
     // localStorage.setItem("cartData", JSON.stringify(cartData));
 
 }
-export { appendCart, setPayDetail };
+
+
+// // ----------- disabling and enabling body scroll ----------
+
+function disableBodyScroll() {
+  const element = document.querySelector("body");
+  element.classList.add("stop-scroll");
+}
+function enableBodyScroll() {
+  const element = document.querySelector("body");
+  element.classList.remove("stop-scroll");
+}
+
+let cartBtn = document.querySelector("#submenu>ul>li:nth-child(2)");
+cartBtn.addEventListener("click", () => {
+  document.getElementById("cart").style.display = "block";
+  window.scrollTo(0, 0);
+  appendCart();
+  document.getElementById("cart").style.marginLeft = "0%";
+  disableBodyScroll();
+});
+
+let cartCloseBtn = document.querySelector(".cartClose");
+cartCloseBtn.addEventListener("click", () => {
+  document.getElementById("cart").style.marginLeft = "100%";
+  enableBodyScroll();
+});
+// export { appendCart, setPayDetail };
