@@ -67,7 +67,7 @@
                 </div>
                 <div class="productDetailsDiv">
                     <div class="productNameDiv">
-                        Beautifying Serum
+                      <%= item.productName %>
                     </div>
                     <div class="productReviewsDiv">
                         <span>
@@ -77,11 +77,11 @@
                             <i class="fas fa-star checked"></i>
                             <i class="fas fa-star checked"></i>
                         </span>
-                        <span> 121 reviews</span>
+                        <span> <%= item.totalReview %> reviews</span>
                     </div>
                     <div class="productPriceDiv">
                         <span>
-                            MRP Rs.730
+                            MRP Rs.<%= item.price %>
                         </span>
                     </div>
                 </div>
