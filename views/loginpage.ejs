@@ -33,7 +33,7 @@
         </div>
         <div id="sign-container-div">
             <div id="form-div">
-                <form action="/login" id="create_customer">
+                <form id="create_customer" action="">
                     <div class="form-header">
                         <h1 class="u-h1">login</h1>
                         <div class="oxi-social-login"><iframe id="social_login_frame" title="Social Login Frame"
@@ -45,20 +45,20 @@
 
 
                     <div class="form-imput-div">
-                        <input type="email" id="email" class="form-input" name="customer[email]" aria-label="Email"
+                        <input type="email" id="email" class="form-input" name="email" aria-label="Email"
                             placeholder="Email" required="required">
                         <label class="form-input-lable">Email</label>
                     </div>
 
                     <div class="form-imput-div">
-                        <input type="password" id="password" class="form-input" name="customer[password]"
+                        <input type="password" id="password" class="form-input" name="password"
                             aria-label="Password" placeholder="Password" required="required" aria-autocomplete="list">
                         <label class="form-input-lable">Password</label>
                         <button type="button" onclick="recoverPassword()" class="form-input-ac-link ac-link"
                             data-action="toggle-recover-form">Forgot
                             password?</button>
                     </div>
-                    <button type="submit" class="login-btn">Login</button>
+                    <button class="login-btn" id="chalja" type="submit">Login</button>
                     <div class="Form__Hint Form__Hint--center">
                         <span class="Text--subdued">Don't have an account?</span>
                         <a href="signup.html" class="ac-link ac-link--secondary">Create one</a>
@@ -76,69 +76,56 @@
 
 </html>
 <script>
-    const recoverPassword = () => {
-        window.location.href = "recover.html";
+    document.getElementById("chalja").addEventListener("click",(e)=>{
+        e.preventDefault();
+        login();
+    })
+
+  
+        async function login() {
+        let login_data = {
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value,
+        
+        };
+    
+        login_data = JSON.stringify(login_data);
+        console.log(login_data);
+
+        let login_api = `http://localhost:8000/login`;
+
+        let response = await fetch(login_api, {
+        method: "POST",
+        body: login_data,
+
+        headers: {
+            "Content-Type": "application/json",
+        },
+        });
+
+        let data = await response.json();
+
+        let email  = document.getElementById("email").value;
+    //   getProfile(email,data.token);
+      console.log('data: ', data);
+    
     }
-    document.querySelector(".login-btn").addEventListener('click', login);
-    var regdUsers = JSON.parse(localStorage.getItem("userData")) || [];
 
+    async function getProfile(email,token){
+        let api = `https://masai-api-mocker.herokuapp.com/user/${email}`;
 
-    function login(e) {
-        e.preventDefault()
-        var email = document.getElementById("email").value;
-        var pass = document.getElementById("password").value;
-
-        if (email == "papa@123" && pass == "neeraj") {
-            window.location.href = "admin.html"
-            alert("login successful");
-        } else {
-            let found = false;
-            for (var i = 0; i < regdUsers.length; i++) {
-                if (
-                    regdUsers[i].email == email &&
-                    regdUsers[i].passWord == pass
-                ) {
-                    let userData = {
-                        username: regdUsers[i].userName,
-                        email: regdUsers[i].email,
-                        passWord: regdUsers[i].passWord,
-                    }
-                    let currentUser = localStorage.setItem("loginUser", JSON.stringify(userData))
-                    alert("login successful");
-                    found = true;
-                    window.location.href = "index.html";
-
-                    break;
+        let response = await fetch(api,{
+                headers : {
+                    "Content-Type" : "application/json",
+                    "Authorization": `Bearer ${token}`
                 }
-            }
-            if (!found) {
-                alert("Wrong Credentials");
-            }
+        });
 
-        }
-
+        // let userdata = await response.json();
+        // console.log('data: ', userdata);
     }
-</script>
+
+
+  </script>
 <script src="../scripts/login.js"></script>
 <script src="../scripts/commonFunctions.js"></script>
-
-<script type="module">
-//   // -------------for cart---------------------
-//   let cartBtn = document.querySelector("#submenu>ul>li:nth-child(2)");
-//   cartBtn.addEventListener("click", () => {
-//     document.getElementById("cart").style.display = "block";
-//     window.scrollTo(0, 0);
-//     appendCart();
-//     document.getElementById("cart").style.marginLeft = "0%";
-//     disableBodyScroll();
-//     document.querySelector("body").style.overflowY = "hidden";
-// })
-
-// let cartCloseBtn = document.querySelector(".cartClose");
-// cartCloseBtn.addEventListener("click", () => {
-//     document.getElementById("cart").style.marginLeft = "100%"
-//     enableBodyScroll();
-//     document.querySelector("body").style.overflowY = "scroll";
-// })
-// //end cart
-// </script>
