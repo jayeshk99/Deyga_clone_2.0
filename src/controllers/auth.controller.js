@@ -1,5 +1,5 @@
 /** @format */
-
+require("dotenv").config;
 const jwt = require("jsonwebtoken");
 const User = require("../models/user.model");
 const newToken = (user) => {
@@ -7,8 +7,7 @@ const newToken = (user) => {
     {
       user: user,
     },
-    "mynameisatulkharwal",
-    { expiresIn: 60 * 60 * 5 }
+    "abcdefghijklmnopqrstuvwxyz"
   );
 };
 const register = async (req, res) => {
@@ -23,7 +22,8 @@ const register = async (req, res) => {
 
     //generte token
     let token = newToken(user);
-    return res.render("index", { user, token });
+    res.cookie('user', user, { expires: new Date(new Date().getTime()+5*60*1000)})
+    return res.redirect("/");
   } catch (error) {
     return res.status(500).send(error.message);
   }
@@ -59,6 +59,7 @@ const login = async (req, res) => {
 
     if (match) {
       const token = newToken(user);
+      res.cookie('user', user, { expires: new Date(new Date().getTime()+5*60*1000)});
       return res.status(200).send({ user, token });
     }
   } catch (error) {
