@@ -12,8 +12,10 @@ app.use(express.static("public"));
 
 const userController = require("./controllers/user.controller");
 const productController = require("./controllers/product.controller");
+const cartController = require("./controllers/cart.controller");
 
 const { register, login } = require("./controllers/auth.controller");
+const authentication = require("./middlewares/authentication");
 
 app.post("/register", register);
 app.post("/login", login);
@@ -25,6 +27,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/collection", productController);
+
+app.use("/cart", cartController);
 
 app.get("/checkout", (req, res) => {
   res.render("checkout");
@@ -38,12 +42,16 @@ app.get("/payment", (req, res) => {
   res.render("payment");
 });
 
-// app.get("/productDetail", (req, res) => {
-//   res.render("productDetail");
-// });
+app.get("/productDetail", (req, res) => {
+  res.render("productDetail");
+});
 
 app.get("/signup", (req, res) => {
   res.render("signup");
 });
+
+app.get("/verifyToken", authentication, (req, res)=>{
+  res.send(req.user);
+})
 
 module.exports = app;

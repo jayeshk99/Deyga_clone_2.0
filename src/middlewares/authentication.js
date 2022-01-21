@@ -11,12 +11,11 @@ const verifyToken = token => {
 }
 
 module.exports = async (req, res, next) => {
-   
+
   if (!req.headers.authorization)
     return res.status(400).send({ message: "bearer token not in header" })
 
   const bearerToken = req.headers.authorization
-
   if (!bearerToken)
     return res.status(400).send({ message: "bearer is not valid" })
 
@@ -24,11 +23,11 @@ module.exports = async (req, res, next) => {
 
   let user
   try {
-    user = await verifyToken(token)
+    user = await verifyToken(token);
+    console.log(user)
   } catch (error) {
     return res.status(401).send({ message: "token is not valid" })
   }
-  console.log(user)
   req.user = user.user
   next()
 }
