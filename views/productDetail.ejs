@@ -81,7 +81,7 @@
             Get free shipping on prepaid orders above Rs. 1400
           </p>
           <div id="btnDiv">
-            <button class="addToCart-hover-underline-animation addToCartBtn">
+            <button class="addToCart-hover-underline-animation addToCartBtn" id="addBtn">
               ADD TO CART</button
             ><button
               class="viewCarthover-underline-animation addToCartBtn"
@@ -113,6 +113,10 @@
 
     <div id="cart"><%- include("./components/cart") %></div>
   </body>
+  <script>
+      const clicked = `<%- JSON.stringify(product) %>`
+      localStorage.setItem("clickedProduct", (clicked));
+  </script>
 </html>
 <script src="/scripts/productDetail.js"></script>
 <script src="/scripts/cart.js"></script>

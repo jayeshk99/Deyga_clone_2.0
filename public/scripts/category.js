@@ -1,39 +1,6 @@
 // /** @format */
 
 
-let currUser = JSON.parse(localStorage.getItem("loginUser")) || 0;
-  console.log(currUser);
-  if (currUser != 0) {
-    document.getElementById("User").textContent = currUser["username"];
-    document.getElementById("logoutUser").style.display = "none";
-    document.getElementById("loginUser").style.display = "block";
-  } else {
-    document.getElementById("User").textContent = "Account";
-    document.getElementById("logoutUser").style.display = "block";
-    document.getElementById("loginUser").style.display = "none";
-  }
-
-  document.getElementById("logout").addEventListener("click", function () {
-    currUser = 0;
-    document.getElementById("User").textContent = "Account";
-    document.getElementById("logoutUser").style.display = "block";
-    document.getElementById("loginUser").style.display = "none";
-    localStorage.setItem("loginUser", JSON.stringify(currUser));
-    window.location.href = "loginpage.html";
-  });
-
-    //cartitems
-    let cartitemsNo = JSON.parse(localStorage.getItem("cartData"));
-  if (cartitemsNo) {
-    cartitemsNo = cartitemsNo.length
-  } else {
-    cartitemsNo = 0
-  }
-  console.log(cartitemsNo);
-  let cartLengthShow = document.querySelector(".dropdown+li>p>b");
-  console.log(cartLengthShow);
-  cartLengthShow.innerText = `Cart (${cartitemsNo})`;
-
 // ---------------for sort--------------------
 let x = 1;
 let menuBtn = document.getElementById("productSortIcon");
@@ -158,8 +125,8 @@ for (let k = 0; k < camelArr.length; k++) {
     break;
   }
 }
-console.log(productData);
-appendData(productData);
+// console.log(productData);
+// appendData(productData);
 
 // ------Sort Function --------
 

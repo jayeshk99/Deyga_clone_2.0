@@ -1,8 +1,25 @@
+let tokenc = document.cookie.split("=")[1];
+
+
+async function getCart(tokenc){
+    let api = `http://localhost:8000/cart`;
+  
+      let response = await fetch(api,{
+        headers : {
+            "Content-Type" : "application/json",
+            "Authorization": `Bearer ${tokenc}`
+        }
+      });
+  
+    let cartData = await response.json();  
+
+  }
+  
+
 // ---------------Appending in cart------------------
 function appendCart() {
     let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
     // let cartData = [];
-    console.log(cartData)
     if (!cartData.length) {
         document.getElementById("emptyCart").style.display = "flex";
         document.getElementById("showCartProduct").style.display = "none";
@@ -115,7 +132,6 @@ function appendCart() {
 
 
 }
-console.log("hi from cart")
 function setPayDetail() {
     // localStorage.setItem("cartData", JSON.stringify(cartData));
 

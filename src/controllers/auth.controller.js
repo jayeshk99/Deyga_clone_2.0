@@ -2,10 +2,11 @@
 require("dotenv").config;
 const jwt = require("jsonwebtoken");
 const User = require("../models/user.model");
+const Cart = require("../models/cart.model");
 const newToken = (user) => {
   return jwt.sign(
     {
-      user: user,
+      user,
     },
     "abcdefghijklmnopqrstuvwxyz"
   );
@@ -20,9 +21,13 @@ const register = async (req, res) => {
     //if not then create user
     user = await User.create(req.body);
 
+    // gengerating cart collection of user
+    let user_id = user._id;
+    let cart = await Cart.create({user_id: user_id})
+
     //generte token
     let token = newToken(user);
-    res.cookie('user', user, { expires: new Date(new Date().getTime()+5*60*1000)})
+    res.cookie('user', token, { expires: new Date(new Date().getTime()+50*60*1000)})
     return res.redirect("/");
   } catch (error) {
     return res.status(500).send(error.message);
@@ -59,7 +64,7 @@ const login = async (req, res) => {
 
     if (match) {
       const token = newToken(user);
-      res.cookie('user', user, { expires: new Date(new Date().getTime()+5*60*1000)});
+      res.cookie("user", token, { expires: new Date(new Date().getTime()+50*60*1000)});
       return res.status(200).send({ user, token });
     }
   } catch (error) {
