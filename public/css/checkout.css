@@ -4,7 +4,7 @@
     }
     body{
         width: 80%;
-    font-family: "Cartner Sans W01" ;
+        font-family: 'Barlow', sans-serif !important;
     /* background-color: burlywood; */
     margin: auto;
     font-size: 19px;

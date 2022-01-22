@@ -4,7 +4,7 @@
   src: url('/font/carter-sans-w01.ttf') format('truetype')
   }
   body{
-  font-family: "Cartner Sans W01" ;
+    font-family: 'Barlow', sans-serif !important;
   font-size: 14px;
   line-height: 1.42857;
   color: rgb(51, 51, 51);
