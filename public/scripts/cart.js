@@ -37,7 +37,7 @@ async function getCart(tokenc){
 
 // updating value of cart nos
 
-    let cartLengthShow = document.querySelector(".dropdown+li>p>b");
+    let cartLengthShow = document.querySelector(".dropdown+li>p");
     getCart(tokenc).then((cart)=>{
         cartLengthShow.innerText = `Cart (${cart.products.length})`;
     })
@@ -192,16 +192,17 @@ let cartBtn = document.querySelector("#submenu>ul>li:nth-child(2)");
 cartBtn.addEventListener("click", () => {
   document.getElementById("cart").style.display = "block";
   window.scrollTo(0, 0);
-  getCart(tokenc);
-  let cartData = JSON.parse(localStorage.getItem("cartData"))
-  appendCart(cartData);
   document.getElementById("cart").style.marginLeft = "0%";
   disableBodyScroll();
+  
+  getCart(tokenc).then((cartData)=>{
+    appendCart(cartData);
+    })
 });
 
 let cartCloseBtn = document.querySelector(".cartClose");
 cartCloseBtn.addEventListener("click", () => {
-    let cartLengthShow = document.querySelector(".dropdown+li>p>b");
+    let cartLengthShow = document.querySelector(".dropdown+li>p");
     getCart(tokenc).then((cart)=>{
         cartLengthShow.innerText = `Cart (${cart.products.length})`;
     })

@@ -60,7 +60,7 @@
                             data-action="toggle-recover-form">Forgot
                             password?</button>
                     </div>
-                    <button class="login-btn" id="chalja" type="submit">Login</button>
+                    <button class="login-btn" id="loginBtn" type="submit">Login</button>
                     <div class="Form__Hint Form__Hint--center">
                         <span class="Text--subdued">Don't have an account?</span>
                         <a href="signup.html" class="ac-link ac-link--secondary">Create one</a>
@@ -78,13 +78,13 @@
 
 </html>
 <script>
-    document.getElementById("chalja").addEventListener("click",(e)=>{
+    document.getElementById("loginBtn").addEventListener("click",(e)=>{
         e.preventDefault();
         login();
     })
 
   
-        async function login() {
+    async function login() {
         let login_data = {
         email: document.getElementById("email").value,
         password: document.getElementById("password").value,
@@ -94,7 +94,7 @@
         login_data = JSON.stringify(login_data);
         console.log(login_data);
 
-        let login_api = `http://localhost:8000/login`;
+        let login_api = `http://localhost:8000/userLogin`;
 
         let response = await fetch(login_api, {
         method: "POST",
@@ -106,10 +106,8 @@
         });
 
         let data = await response.json();
-
-        let email  = document.getElementById("email").value;
-    //   getProfile(email,data.token);
-      console.log('data: ', data);
+        window.location.href = "/"
+        console.log('data: ', data);
     
     }
 
