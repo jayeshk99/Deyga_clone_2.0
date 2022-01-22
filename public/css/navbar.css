@@ -3,7 +3,7 @@
     src: url('/font/carter-sans-w01.ttf') format('truetype')
     }
     body{
-    font-family: "Cartner Sans W01" ;
+      font-family: 'Barlow', sans-serif !important;
     font-weight: 600;
     margin: 0;
     padding: 0px;
@@ -13,7 +13,7 @@
     header {
       /* background-color: red; */
     border-bottom: 1px solid rgb(185, 185, 185);
-    height: 182px;
+    /* height: 182px; */
     width: 100%;
     position: fixed;
     margin: 0;
@@ -31,7 +31,7 @@
     }
     .header-wrapper{
     margin: auto;
-    max-width: 1400px;
+    /* max-width: 1400px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,8 +72,11 @@
     justify-content: space-between;
     flex-wrap: wrap;
     }
-    .account div{
-    width: 50%;
+    .account #searchBox {
+      width: 60%;
+    }
+    .account #submenu {
+      width: 40%;
     }
     .mb-account{
       display: none;
