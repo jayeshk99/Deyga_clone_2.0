@@ -19,13 +19,13 @@ return userData;
 
 
 async function updateUser(){
-  let user = await getProfile(token2);
-  if (user.message === "token is not valid") {
+  if(token2 === undefined){
     document.getElementById("User").textContent = "Account";
     document.getElementById("logoutUser").style.display = "block";
     document.getElementById("loginUser").style.display = "none";
-
-  } else {
+  }
+ else {
+    let user = await getProfile(token2);
     document.getElementById("User").textContent = user.first_name;
     document.getElementById("logoutUser").style.display = "none";
     document.getElementById("loginUser").style.display = "block";

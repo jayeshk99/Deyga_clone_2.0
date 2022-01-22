@@ -17,8 +17,12 @@ const cartController = require("./controllers/cart.controller");
 const { register, login } = require("./controllers/auth.controller");
 const authentication = require("./middlewares/authentication");
 
+app.get("/login", (req, res) => {
+  res.render("loginpage");
+});
+
 app.post("/register", register);
-app.post("/login", login);
+app.post("/userLogin", login);
 
 app.use("/post/users", userController);
 
@@ -34,9 +38,7 @@ app.get("/checkout", (req, res) => {
   res.render("checkout");
 });
 
-app.get("/login", (req, res) => {
-  res.render("loginpage");
-});
+
 
 app.get("/logout", (req, res)=>{
   res.clearCookie('user');

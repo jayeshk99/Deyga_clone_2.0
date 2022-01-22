@@ -42,7 +42,7 @@ async function addToCart(){
   let cartData = await response.json();  
   
   
-  let cartLengthShow = document.querySelector(".dropdown+li>p>b");
+  let cartLengthShow = document.querySelector(".dropdown+li>p");
 
   cartLengthShow.innerText = `Cart (${cartData.products.length})`;
 

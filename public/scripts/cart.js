@@ -37,7 +37,7 @@ async function getCart(tokenc){
 
 // updating value of cart nos
 
-    let cartLengthShow = document.querySelector(".dropdown+li>p>b");
+    let cartLengthShow = document.querySelector(".dropdown+li>p");
     getCart(tokenc).then((cart)=>{
         cartLengthShow.innerText = `Cart (${cart.products.length})`;
     })
