@@ -24,10 +24,10 @@ module.exports = async (req, res, next) => {
   let user
   try {
     user = await verifyToken(token);
-    console.log(user)
   } catch (error) {
     return res.status(401).send({ message: "token is not valid" })
   }
   req.user = user.user
+
   next()
 }

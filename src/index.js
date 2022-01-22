@@ -38,6 +38,11 @@ app.get("/login", (req, res) => {
   res.render("loginpage");
 });
 
+app.get("/logout", (req, res)=>{
+  res.clearCookie('user');
+  res.redirect("/");
+})
+
 app.get("/payment", (req, res) => {
   res.render("payment");
 });
