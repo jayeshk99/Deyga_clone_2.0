@@ -1,8 +1,46 @@
-let data = JSON.parse(localStorage.getItem("cartData"));
 
-let paymentDetail = JSON.parse(localStorage.getItem("paymentDetail"));
+let tokenc = document.cookie.split("=")[1];
+
+
+async function getCart(tokenc){
+    let api = `http://localhost:8000/cart`;
+  
+      let response = await fetch(api,{
+        headers : {
+            "Content-Type" : "application/json",
+            "Authorization": `Bearer ${tokenc}`
+        }
+      });
+  
+    let cartData = await response.json();  
+
+    localStorage.setItem("cartData", JSON.stringify(cartData));
+    return cartData
+  }
+  getCart(tokenc);
+  let data = JSON.parse(localStorage.getItem("cartData"));
+  data = data.products;
+  let totalPrice = 0;
+  for (let i = 0; i < data.length; i++) {
+      totalPrice += data[i].price * data[i].productQuantity;
+  }
+  let shippingCharges;
+  if (totalPrice > 1000) {
+      shippingCharges = 0;
+  } else { shippingCharges = 70; }
+  let paymentDetail = {
+      subTotal: totalPrice,
+      discount: 0,
+      shippingCharges: shippingCharges,
+      grandTotal: totalPrice + shippingCharges
+  }
+
+
+
+// let paymentDetail = JSON.parse(localStorage.getItem("paymentDetail"));
 let couponFlag = JSON.parse(localStorage.getItem("couponFlag"));
 console.log(data);
+
 function appendCheckout(data) {
   let totalPrice = 0;
   for (let i = 0; i < data.length; i++) {
@@ -36,6 +74,7 @@ function appendCheckout(data) {
   document.querySelector(".checkoutTextDirecton>p:nth-child(2)").textContent =
     "₹ " + paymentDetail.shippingCharges;
 }
+
 appendCheckout(data);
 
 let couponBtn = document.getElementById("couponBtn");

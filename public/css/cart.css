@@ -154,7 +154,7 @@ display: none;
     margin-bottom: 10px;
     font-size: 13px;
 }
-#showCartBottom>button{
+#showCartBottom>a>button{
     display: flex;
     justify-content: center;
     width: 100%;

@@ -117,7 +117,7 @@ select{
     /* float: right; */
     width: 50%;
 }
-.cToShippingDiv2 > button{
+.cToShippingDiv2 >a> button{
     float: right;
     border: 1px solid #383636;
     padding: 20px;

@@ -26,7 +26,7 @@ window.onscroll = function () {
 // add to cart action
 
 let product = localStorage.getItem("clickedProduct");
-console.log(product)
+
 async function addToCart(){
   let api = `http://localhost:8000/cart`;
   
@@ -40,6 +40,12 @@ async function addToCart(){
   });
 
   let cartData = await response.json();  
+  
+  
+  let cartLengthShow = document.querySelector(".dropdown+li>p>b");
+
+  cartLengthShow.innerText = `Cart (${cartData.products.length})`;
+
 }
 
 let addBtn = document.getElementById("addBtn");

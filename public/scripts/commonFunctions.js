@@ -29,6 +29,7 @@ async function updateUser(){
     document.getElementById("User").textContent = user.first_name;
     document.getElementById("logoutUser").style.display = "none";
     document.getElementById("loginUser").style.display = "block";
+
   }
 
 
@@ -45,17 +46,4 @@ async function updateUser(){
 updateUser();
 
 
-
-  // updating cart items value in navbar
-  //cartitems
-  let cartitemsNo = JSON.parse(localStorage.getItem("cartData"));
-  if (cartitemsNo) {
-    cartitemsNo = cartitemsNo.length
-  } else {
-    cartitemsNo = 0
-  }
-
-  let cartLengthShow = document.querySelector(".dropdown+li>p>b");
-
-  cartLengthShow.innerText = `Cart (${cartitemsNo})`;
 
