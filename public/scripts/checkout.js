@@ -1,9 +1,9 @@
 
 let tokenc = document.cookie.split("=")[1];
-let hostname  = window.location.host;
+let hostname2  = window.location.origin;
 
 async function getCart(tokenc){
-    let api = `https://${hostname}/cart`;
+    let api = `${hostname2}/cart`;
   
       let response = await fetch(api,{
         headers : {
@@ -34,7 +34,7 @@ async function getCart(tokenc){
       shippingCharges: shippingCharges,
       grandTotal: totalPrice + shippingCharges
   }
-
+  
 
 
 // let paymentDetail = JSON.parse(localStorage.getItem("paymentDetail"));
@@ -73,44 +73,45 @@ function appendCheckout(data) {
 
   document.querySelector(".checkoutTextDirecton>p:nth-child(2)").textContent =
     "₹ " + paymentDetail.shippingCharges;
+    localStorage.setItem("paymentDetail", JSON.stringify(paymentDetail));
 }
 
 appendCheckout(data);
 
-let couponBtn = document.getElementById("couponBtn");
-couponBtn.addEventListener("click", () => {
-  let couponCode = document.getElementById("couponCode").value;
-  if (couponCode === "masai30") {
-    if (couponFlag) {
-      alert("Coupon Already Applied");
-    } else {
-      let discountValue = Math.floor(paymentDetail.subTotal * 0.3);
-      console.log("dis", discountValue);
-      let grandTotal =
-        paymentDetail.subTotal + paymentDetail.shippingCharges - discountValue;
-      let priceShow2 = document.querySelector("#checkoutTotalAmount>div>span");
-      priceShow2.textContent = `₹ ${grandTotal}`;
-      document.querySelector(
-        ".checkoutTextDirecton>p:nth-child(3)"
-      ).textContent = `₹ ${discountValue}`;
-      document.querySelector(
-        ".checkoutTextDirecton>p:nth-child(3)"
-      ).style.color = "green";
-      document.querySelector(
-        ".checkoutSubtoal>div>p:nth-child(3)"
-      ).style.color = "green";
-      alert("30% off applied");
-      couponFlag = true;
+// let couponBtn = document.getElementById("couponBtn");
+// couponBtn.addEventListener("click", () => {
+//   let couponCode = document.getElementById("couponCode").value;
+//   if (couponCode === "masai30") {
+//     if (couponFlag) {
+//       alert("Coupon Already Applied");
+//     } else {
+//       let discountValue = Math.floor(paymentDetail.subTotal * 0.3);
+//       console.log("dis", discountValue);
+//       let grandTotal =
+//         paymentDetail.subTotal + paymentDetail.shippingCharges - discountValue;
+//       let priceShow2 = document.querySelector("#checkoutTotalAmount>div>span");
+//       priceShow2.textContent = `₹ ${grandTotal}`;
+//       document.querySelector(
+//         ".checkoutTextDirecton>p:nth-child(3)"
+//       ).textContent = `₹ ${discountValue}`;
+//       document.querySelector(
+//         ".checkoutTextDirecton>p:nth-child(3)"
+//       ).style.color = "green";
+//       document.querySelector(
+//         ".checkoutSubtoal>div>p:nth-child(3)"
+//       ).style.color = "green";
+//       alert("30% off applied");
+//       couponFlag = true;
 
-      paymentDetail.discount = discountValue;
-      paymentDetail.grandTotal = grandTotal;
-      localStorage.setItem("paymentDetail", JSON.stringify(paymentDetail));
-      localStorage.setItem("couponFlag", JSON.stringify(couponFlag));
-    }
-  } else {
-    alert("Invalid Coupon code");
-  }
-});
+//       paymentDetail.discount = discountValue;
+//       paymentDetail.grandTotal = grandTotal;
+//       localStorage.setItem("paymentDetail", JSON.stringify(paymentDetail));
+//       localStorage.setItem("couponFlag", JSON.stringify(couponFlag));
+//     }
+//   } else {
+//     alert("Invalid Coupon code");
+//   }
+// });
 
 let continueBtn = document.querySelector(".cToShippingDiv2");
 continueBtn.addEventListener("click", () => {

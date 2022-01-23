@@ -1,4 +1,4 @@
-let hostname  = window.location.host;
+let hostname  = window.location.origin;
 let productDetailData = JSON.parse(localStorage.getItem("clickedProduct"));
 let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
 let token = document.cookie.split("=")[1];
@@ -63,7 +63,7 @@ productImageContainer.append(productImgMain, thumbNailDiv);
 
 
 async function addToCart(){
-  let api = `https://${hostname}/cart`;
+  let api = `${hostname}/cart`;
   
   let response = await fetch(api,{
     method: "PATCH",
@@ -83,7 +83,13 @@ async function addToCart(){
 }
 
 let addBtn = document.getElementById("addBtn");
-addBtn.addEventListener("click", addToCart);
+addBtn.addEventListener("click", ()=>{
+  if(token === undefined){
+    window.location.href = "/signup"
+  }else{
+    addToCart();
+  }
+});
 
 
 
