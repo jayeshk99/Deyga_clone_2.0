@@ -11,6 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 app.use(passport.initialize());
+app.set('trust proxy', 1)
 
 const userController = require("./controllers/user.controller");
 const productController = require("./controllers/product.controller");
