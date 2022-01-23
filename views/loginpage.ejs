@@ -76,6 +76,7 @@
 
 </html>
 <script>
+    let hostNamel = window.location.origin;
     document.getElementById("loginBtn").addEventListener("click",(e)=>{
         e.preventDefault();
         login();
@@ -92,7 +93,7 @@
         login_data = JSON.stringify(login_data);
         console.log(login_data);
 
-        let login_api = `http://localhost:8000/userLogin`;
+        let login_api = `${hostNamel}/userLogin`;
 
         let response = await fetch(login_api, {
         method: "POST",
@@ -108,21 +109,6 @@
         console.log('data: ', data);
     
     }
-
-    async function getProfile(email,token){
-        let api = `https://masai-api-mocker.herokuapp.com/user/${email}`;
-
-        let response = await fetch(api,{
-                headers : {
-                    "Content-Type" : "application/json",
-                    "Authorization": `Bearer ${token}`
-                }
-        });
-
-        // let userdata = await response.json();
-        // console.log('data: ', userdata);
-    }
-
 
   </script>
 <script src="../scripts/login.js"></script>
