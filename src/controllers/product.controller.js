@@ -14,6 +14,20 @@ router.get("/:name",  async (req, res)=>{
     }
 
 })
+
+// router.get("/:name/hightolow", async (req, res) => {
+//   try {
+//     const products = await Product.find({ category: req.params.name })
+//       .sort({ price: 1 })
+//       .lean()
+//       .exec();
+
+//     res.render(".category", { products: products });
+//   } catch (error) {
+//     res.send(error);
+//   }
+// });
+
 router.get("/productDetail/:_id", async (req, res)=>{
     try {
 

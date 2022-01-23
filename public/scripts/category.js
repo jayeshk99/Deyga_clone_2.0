@@ -96,35 +96,35 @@ function appendData(data) {
   });
 }
 
-let clickedCategory = JSON.parse(localStorage.getItem("clickedCategory"));
-let productData = JSON.parse(localStorage.getItem(`${clickedCategory}`));
-let camelArr = [
-  "skinCare",
-  "babyCareProduct",
-  "menProduct",
-  "comboProduct",
-  "hairCareData",
-  "bathBody",
-  "OralCare",
-  "wellNess",
-];
-let nameArr = [
-  "Skin Care",
-  "Baby Care",
-  "Men",
-  "Combo",
-  "Hair Care",
-  "Bath & Body",
-  "Oral Care",
-  "Wellness",
-];
-for (let k = 0; k < camelArr.length; k++) {
-  if (clickedCategory === camelArr[k]) {
-    document.getElementById("categoryTitle").textContent = nameArr[k];
-    document.getElementById("linkTitle").textContent = nameArr[k];
-    break;
-  }
-}
+// let clickedCategory = JSON.parse(localStorage.getItem("clickedCategory"));
+let productData = JSON.parse(localStorage.getItem("clickedCategory"));
+// let camelArr = [
+//   "skinCare",
+//   "babyCareProduct",
+//   "menProduct",
+//   "comboProduct",
+//   "hairCareData",
+//   "bathBody",
+//   "OralCare",
+//   "wellNess",
+// ];
+// let nameArr = [
+//   "Skin Care",
+//   "Baby Care",
+//   "Men",
+//   "Combo",
+//   "Hair Care",
+//   "Bath & Body",
+//   "Oral Care",
+//   "Wellness",
+// ];
+// for (let k = 0; k < camelArr.length; k++) {
+//   if (clickedCategory === camelArr[k]) {
+//     document.getElementById("categoryTitle").textContent = nameArr[k];
+//     document.getElementById("linkTitle").textContent = nameArr[k];
+//     break;
+//   }
+// }
 // console.log(productData);
 // appendData(productData);
 
