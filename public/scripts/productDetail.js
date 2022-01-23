@@ -1,4 +1,4 @@
-
+let hostname  = window.location.host;
 let productDetailData = JSON.parse(localStorage.getItem("clickedProduct"));
 let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
 let token = document.cookie.split("=")[1];
@@ -63,7 +63,7 @@ productImageContainer.append(productImgMain, thumbNailDiv);
 
 
 async function addToCart(){
-  let api = `http://localhost:8000/cart`;
+  let api = `https://${hostname}/cart`;
   
   let response = await fetch(api,{
     method: "PATCH",

@@ -1,7 +1,7 @@
 /** @format */
 
 const app = require("./index");
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8000;
 
 const connect = require("./configs/db");
 
