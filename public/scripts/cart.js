@@ -190,14 +190,16 @@ function enableBodyScroll() {
 
 let cartBtn = document.querySelector("#submenu>ul>li:nth-child(2)");
 cartBtn.addEventListener("click", () => {
-  document.getElementById("cart").style.display = "block";
-  window.scrollTo(0, 0);
-  document.getElementById("cart").style.marginLeft = "0%";
-  disableBodyScroll();
+    getCart(tokenc).then((cartData) => {
+      appendCart(cartData);
+    });
+    document.getElementById("cart").style.display = "block";
+    window.scrollTo(0, 0);
+    document.getElementById("cart").style.marginLeft = "0%";
+
+    disableBodyScroll();
   
-  getCart(tokenc).then((cartData)=>{
-    appendCart(cartData);
-    })
+  
 });
 
 let cartCloseBtn = document.querySelector(".cartClose");
