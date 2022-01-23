@@ -52,7 +52,7 @@
           <li>Alphabetically A to Z</li>
           <li>Alphabetically Z to A</li>
           <li>Price Low to High</li>
-          <li>Price High to Low</li>
+          <li>Price High to Low </li>
         </ul>
       </div>
     </div>
@@ -122,7 +122,10 @@
   <footer> <%- include("./components/footer") %> </footer>
   <div id="cart"><%- include("./components/cart") %></div>
 </body>
-
+<script>
+  const clickedCategory = `<%- JSON.stringify(products) %>`
+  localStorage.setItem("clickedCategory", (clickedCategory));
+</script>
 </html>
 <script src="../scripts/category.js"></script>
 <!-- <script src="../scripts/data.js"></script> -->

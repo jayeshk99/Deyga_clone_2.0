@@ -15,6 +15,7 @@ app.use(passport.initialize());
 const userController = require("./controllers/user.controller");
 const productController = require("./controllers/product.controller");
 const cartController = require("./controllers/cart.controller");
+const Cart = require("./models/cart.model");
 
 const { register, login } = require("./controllers/auth.controller");
 const authentication = require("./middlewares/authentication");
@@ -36,10 +37,11 @@ app.get(
   passport.authenticate("google", {
     failureRedirect: "/auth/google/failure",
   }),
-  (req, res) => {
+  async (req, res) => {
     res.cookie("user", req.user.token, {
       expires: new Date(new Date().getTime() + 50 * 60 * 1000),
     });
+    let cart = await Cart.create({ user_id: req.user.user._id });
     return res.redirect("/");
     // return res.status(201).json({ user: req.user.user, token: req.user.token });
   }

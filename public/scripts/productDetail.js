@@ -45,6 +45,7 @@ myData.productImgUrl2.forEach((element) => {
 
   thumbImgSpan.addEventListener("click", function () {
     productImgMain.src = element;
+    productImgMain.style.transition = "1s";
     thumbImgSpan.style.border = "1px solid";
   });
   thumbImgSpan.style.border = "none";

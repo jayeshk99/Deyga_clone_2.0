@@ -26,7 +26,8 @@ async function updateUser(){
   }
  else {
     let user = await getProfile(token2);
-    document.getElementById("User").textContent = user.first_name;
+    document.getElementById("User").textContent =
+      "Hello" + " " + user.first_name;
     document.getElementById("logoutUser").style.display = "none";
     document.getElementById("loginUser").style.display = "block";
 
