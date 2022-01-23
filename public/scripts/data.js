@@ -1,92 +1,173 @@
-let skinCare = [
+let skinCare =[
   {
     productImgUrl2: [
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/71503313_23843770495820528_3471803570674728960_n_400x.png?v=1623384495",
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/WhatsApp_Image_2019-04-27_at_11.36.25_AM_6_800x.png?v=1623384495",
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/BeetrootLipBalm_800x.jpg?v=1623384495",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/904_0003_Beetroot_07aa7e6f-c52b-42d1-8839-a4678e5b2ef3_800x.jpg?v=1641838454",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5098_800x.jpg?v=1641838454",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5131_160x.jpg?v=1641838454",
     ],
-
     productName: "Beetroot Lip Balm",
     productRating: 5,
     totalReview: 904,
     price: 290,
     productSize: "1 Unit",
     productQuantity: 1,
+    category:"skincare"
   },
   {
     productImgUrl2: [
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/WhatsAppImage2020-11-07at8.30.16PM_900x.jpg?v=1617806493",
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Artboard_4_800x.jpg?v=1624294303",
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Aloevera_c217b58e-75da-4c0c-aa72-4d8d752bff1e_800x.jpg?v=1623383976",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/904_0007_aloevera_900x.jpg?v=1641031381",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6198_493bee98-4888-48f6-b9a4-389149bb9608_800x.jpg?v=1641032135",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6232_cf800c05-c2c8-4a03-973a-325e3a6f7e2e_800x.jpg?v=1641032135",
     ],
-
     productName: "Aloe Vera Gel",
     productRating: 5,
     totalReview: 520,
     price: 390,
     productSize: "1 Unit",
     productQuantity: 1,
+  category:"skincare"
   },
   {
     productImgUrl2: [
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/YFP07974_1_900x.jpg?v=1609860890",
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Artboard_1_800x.jpg?v=1632144261",
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Deyga_1000px_4_800x.jpg?v=1609860890",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/904_0001_Charcoal_800x.jpg?v=1641031433",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Untitled-2_800x.jpg?v=1641031433",
     ],
-
     productName: "Charcoal Bath Bar",
     productRating: 4,
     totalReview: 615,
     price: 410,
     productSize: "1 Bar",
     productQuantity: 1,
+  category:"skincare"
   },
   {
     productImgUrl2: [
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Untitleddesign_72_800x.png?v=1623388973",
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Rose_mulethi_700x.jpg?v=1624294138",
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/RoseandMulethi_800x.jpg?v=1623388973",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/904_0000_Rose_800x.jpg?v=1641031595",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6253_800x.jpg?v=1641032272",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6366_800x.jpg?v=1641032272",
     ],
-
     productName: "Rose & Mulethi Skin Brightening Pack",
     productRating: 5,
     totalReview: 251,
     price: 490,
     productSize: "100ml",
     productQuantity: 1,
+  category:"skincare"
   },
   {
     productImgUrl2: [
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Untitleddesign_8_900x.jpg?v=1623390199",
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Deyga_9_800x.jpg?v=1623390199",
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/UnderEyeCream_800x.jpg?v=1623390199",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5711_800x.jpg?v=1641468153",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5707_800x.jpg?v=1641468153",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5715_800x.jpg?v=1641468153",
     ],
-
     productName: "Under Eye Cream",
     productRating: 4,
     totalReview: 91,
     price: 550,
     productSize: "100ml",
     productQuantity: 1,
+  category:"haircare"
   },
   {
     productImgUrl2: [
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Untitleddesign_7_800x.jpg?v=1623384450",
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Artboard_3_800x.jpg?v=1623384450",
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/PG_800x.jpg?v=1623388869",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/904_0004_beautyfying_800x.jpg?v=1641031411",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5633_800x.jpg?v=1641032290",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Beautifying_20Serum_800x.jpg?v=1641032290",
     ],
-
     productName: "Beautifying Serum",
     productRating: 5,
     totalReview: 121,
     price: 730,
     productSize: "1 Unit",
     productQuantity: 1,
+  category:haircare
+  },
+  {
+    productImgUrl2: [
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6942_900x.jpg?v=1641031640",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5980_800x.jpg?v=1641032298",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5986_800x.jpg?v=1641032298",
+    ],
+    productName: "Strawberry Lip Scrub",
+    productRating: 5,
+    totalReview: 77,
+    price: 290,
+    productSize: "1 Unit",
+    productQuantity: 1,
+  category:haircare
+  },
+  {
+    productImgUrl2: [
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5482_800x.jpg?v=1641031662",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5487_800x.jpg?v=1641031662",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6588_800x.jpg?v=1641031662",
+    ],
+    productName: "Tea Tree Facial Toner 100ml",
+    productRating: 4,
+    totalReview: 71,
+    price: 470,
+    productSize: "1 Unit",
+    productQuantity: 1,
+  category:haircare
+  },
+  {
+    productImgUrl2: [
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/FACE_20__20BODY_20EXFOLIATOR_20100ML_800x.jpg?v=1641031466",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6256_800x.jpg?v=1641031466",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6269_800x.jpg?v=1641031466",
+    ],
+    productName: "Face & Body Exfoliator 100ml",
+    productRating: 5,
+    totalReview: 151,
+    price: 351,
+    productSize: "1 Unit",
+    productQuantity: 1,
+  category:haircare
+  },
+  {
+    productImgUrl2: [
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/SPIRULINA_20MATCHA_20FACE_20PACK_900x.jpg?v=1641031636",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6194_800x.jpg?v=1641031636",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6379_800x.jpg?v=1641031636",
+    ],
+    productName: "Neem Seed Oil",
+    productRating: 3,
+    totalReview: 53,
+    price: 270,
+    productSize: "30ml",
+    productQuantity: 1,
+  category:haircare
+  },
+  {
+    productImgUrl2: [
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Rose_20Glow_20Serum_2030ml_800x.jpg?v=1641031585",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Orange_800x.jpg?v=1623388735",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Orangeandalmond_1_800x.jpg?v=1623388735",
+    ],
+    productName: "Orange & Almond Face Pack 200g",
+    productRating: 5,
+    totalReview: 21,
+    price: 491,
+    productSize: "1 Unit",
+    productQuantity: 1,
+      category:haircare
+  },
+  {
+    productImgUrl2: [
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Eye_20Brow_20Growth_20oil_900x.jpg?v=1641031468",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6478_160x.jpg?v=1641031585",
+    ],
+    productName: "Beetroot Lip Balm",
+    productRating: 5,
+    totalReview: 904,
+    price: 290,
+    productSize: "1 Unit",
+    productQuantity: 1,
+    category:"skincare"
   },
   {
     productImgUrl2: [
       "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Untitleddesign_9_900x.jpg?v=1623389537",
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/MG_8683_800x.png?v=1623389537",
       "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Strawberry_800x.jpg?v=1623389537",
     ],
 
@@ -96,12 +177,13 @@ let skinCare = [
     price: 290,
     productSize: "1 Unit",
     productQuantity: 1,
+    category:"skincare"
   },
   {
     productImgUrl2: [
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/19_900x.jpg?v=1620726526",
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Deyga_1_0004_Deyga_3_800x.jpg?v=1620726526",
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/TeaTreeFacialToner_800x.jpg?v=1623390022",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Rose_20Glow_20Serum_2030ml_900x.jpg?v=1641031585",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5615_800x.jpg?v=1641031585",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5620_800x.jpg?v=1641031585",
     ],
 
     productName: "Tea Tree Facial Toner 100ml",
@@ -110,12 +192,13 @@ let skinCare = [
     price: 470,
     productSize: "1 Unit",
     productQuantity: 1,
+    category:"skincare"
   },
   {
     productImgUrl2: [
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/MG_8674_600x_91dccd08-1e04-4d94-b29a-677bcdc2509a_600x.png?v=1629349185",
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/MG_8656_800x.png?v=1629349185",
-      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Exfoliator_800x.jpg?v=1629349185",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/FACE_20__20BODY_20EXFOLIATOR_20100ML_800x.jpg?v=1641031466",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6256_800x.jpg?v=1641031466",
+      "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6269_800x.jpg?v=1641031466",
     ],
 
     productName: "Face & Body Exfoliator 100ml",
@@ -124,6 +207,7 @@ let skinCare = [
     price: 351,
     productSize: "1 Unit",
     productQuantity: 1,
+    category:"skincare"
   },
   {
     productImgUrl2: [
@@ -138,6 +222,7 @@ let skinCare = [
     price: 270,
     productSize: "30ml",
     productQuantity: 1,
+    category:"skincare"
   },
   {
     productImgUrl2: [
