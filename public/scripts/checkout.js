@@ -1,9 +1,9 @@
 
 let tokenc = document.cookie.split("=")[1];
-
+let hostname  = window.location.host;
 
 async function getCart(tokenc){
-    let api = `http://localhost:8000/cart`;
+    let api = `https://${hostname}/cart`;
   
       let response = await fetch(api,{
         headers : {

@@ -1,8 +1,8 @@
 let tokenc = document.cookie.split("=")[1];
-
-
+let hostname  = window.location.host;
+console.log(hostname)
 async function getCart(tokenc){
-    let api = `http://localhost:8000/cart`;
+    let api = `https://${hostname}/cart`;
   
       let response = await fetch(api,{
         headers : {
@@ -18,7 +18,7 @@ async function getCart(tokenc){
   }
   
   async function removeFromCart(products){
-    let api = `http://localhost:8000/cart/deleteProduct`;
+    let api = `https://${hostname}/cart/deleteProduct`;
     products = JSON.stringify(products);
     let response = await fetch(api,{
       method: "PATCH",

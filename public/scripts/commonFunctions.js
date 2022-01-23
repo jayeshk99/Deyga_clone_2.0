@@ -1,8 +1,8 @@
 
 let token2 = document.cookie.split("=")[1];
-
+let hostname  = window.location.origin;
 async function getProfile(token2){
-  let api = `http://localhost:8000/verifyToken`;
+  let api = `${hostname}/verifyToken`;
 
   let response = await fetch(api,{
           headers : {
