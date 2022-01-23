@@ -1,8 +1,8 @@
 let tokenc = document.cookie.split("=")[1];
-let hostname  = window.location.host;
-console.log(hostname)
+let hostnamec  = window.location.origin;
+console.log(hostnamec)
 async function getCart(tokenc){
-    let api = `https://${hostname}/cart`;
+    let api = `${hostnamec}/cart`;
   
       let response = await fetch(api,{
         headers : {
@@ -18,7 +18,7 @@ async function getCart(tokenc){
   }
   
   async function removeFromCart(products){
-    let api = `https://${hostname}/cart/deleteProduct`;
+    let api = `${hostnamec}/cart/deleteProduct`;
     products = JSON.stringify(products);
     let response = await fetch(api,{
       method: "PATCH",
@@ -36,11 +36,15 @@ async function getCart(tokenc){
   }
 
 // updating value of cart nos
-
-    let cartLengthShow = document.querySelector(".dropdown+li>p");
-    getCart(tokenc).then((cart)=>{
-        cartLengthShow.innerText = `Cart (${cart.products.length})`;
-    })
+    if(tokenc === undefined){
+        let cartLengthShow = document.querySelector(".dropdown+li>p");
+        cartLengthShow.innerText = `Cart(0)`;
+    }else{
+        let cartLengthShow = document.querySelector(".dropdown+li>p");
+        getCart(tokenc).then((cart)=>{
+            cartLengthShow.innerText = `Cart (${cart.products.length})`;
+        })
+    }
 
 
 
@@ -188,16 +192,24 @@ function enableBodyScroll() {
   element.classList.remove("stop-scroll");
 }
 
+// --------------------------------------------------------------------
+
+
 let cartBtn = document.querySelector("#submenu>ul>li:nth-child(2)");
 cartBtn.addEventListener("click", () => {
-    getCart(tokenc).then((cartData) => {
-      appendCart(cartData);
-    });
-    document.getElementById("cart").style.display = "block";
-    window.scrollTo(0, 0);
-    document.getElementById("cart").style.marginLeft = "0%";
+    if(tokenc === undefined){
+        window.location.href = "/signup"
+    }else{
+        getCart(tokenc).then((cartData) => {
+        appendCart(cartData);
+        document.getElementById("cart").style.display = "block";
+        window.scrollTo(0, 0);
+        document.getElementById("cart").style.marginLeft = "0%";
+    
+        disableBodyScroll();
+        });
+    }
 
-    disableBodyScroll();
   
   
 });
