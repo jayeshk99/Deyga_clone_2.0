@@ -1,13 +1,11 @@
-# Deyga_clone_2.0
 
----
 
 # Welcome 👋
 
 
 
 ## About this project: 🙌
->This is a team project built built by team of 5 members.
+>This is a team project built built by team of 3 members.
 
 ---
 ## Our Team Members ❤️
