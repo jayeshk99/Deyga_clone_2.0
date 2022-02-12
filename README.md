@@ -1,7 +1,5 @@
 # Deyga_clone_2.0
-Deyga is an e-commerce website for cosmetics. We developed this full-stack clone using EJS, CSS, JavaScript, NodeJs, MongoDb, ExpressJs. We also implemented google authentication.
----
-# Deyga Front-End Project
+
 ---
 
 # Welcome 👋
@@ -16,8 +14,7 @@ Deyga is an e-commerce website for cosmetics. We developed this full-stack clone
 - **[Jayesh Khairnar](https://github.com/jayeshk99)**
 - **[Atul Kharwal](https://github.com/iamkharwal)**
 - **[Anshul Sharma](https://github.com/anshul160196)**
-- **[Neeraj Shukla](https://github.com/NeerajShUkL)**
-- **[Yogesh kumawat](https://github.com/saurabh0413)**
+
 
 ---
 
@@ -45,6 +42,9 @@ First you will go to the `Home Page`. There you have to click on account to get 
 - `HTML`
 - `CSS`
 - `JavaScript`
+-  `NodeJs`
+- `MongoDb`
+- `ExpressJs`
 
 ---
 
